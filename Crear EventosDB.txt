@@ -1,0 +1,277 @@
+create table Persona(
+	Id varchar(30) NOT NULL);
+
+alter table Persona
+	add constraint pk_Persona
+	primary key (Id);
+
+create table PersonaFisica(
+	Id varchar(30) NOT NULL,
+	Apellido1 varchar(30) NULL,
+	Apellido2 varchar(30) NULL,
+	Nombre varchar(30) NULL,
+	Correo varchar(30) NULL,
+	FecNacimiento date NULL,
+	Sexo varchar(1) NULL);
+
+alter table PersonaFisica
+	add constraint pk_PersonaFisica
+	primary key (Id);
+
+create table Sucursal(
+	IdSucursal varchar(30) NOT NULL,
+	Nombre varchar(30) NOT NULL);
+
+alter table Sucursal
+	add constraint pk_Sucursal
+	primary key (IdSucursal);
+
+create table PersonaJuridica(
+	Id varchar(30) NOT NULL,
+	Correo varchar(30) NULL,
+	Contacto varchar(30) NULL,
+	Nombre varchar(30) NULL);
+
+alter table PersonaJuridica
+	add constraint pk_PersonaJuridica
+	primary key (Id);
+
+create table Cliente(
+	Id varchar(30) NOT NULL,
+	IdCliente varchar(30) NOT NULL);
+
+alter table Cliente
+	add constraint pk_Cliente
+	primary key (IdCliente);
+
+create table Empleado(
+	Id varchar(30) NOT NULL,
+	IdEmpleado varchar(30) NOT NULL,
+	IdEncargado varchar(30) NULL,
+	IdSucursal varchar(30) NOT NULL);
+
+alter table Empleado
+	add constraint pk_Empleado
+	primary key (IdEmpleado);
+
+create table Usuario(
+	IdEmpleado varchar(30) NOT NULL,
+	Usuario varchar(30) NOT NULL,
+	Rol varchar(30) NOT NULL,
+	Clave varchar(30) NULL);
+
+alter table Usuario
+	add constraint pk_Usuario
+	primary key (IdEmpleado,Usuario);
+
+create table Telefono(
+	Id varchar(30) NOT NULL,
+	Tipo varchar(30) NOT NULL,
+	Numero varchar(30) NULL);
+
+alter table Telefono
+	add constraint pk_Telefono
+	primary key (Id,Tipo);
+
+create table Provedor(
+	Id varchar(30) NOT NULL,
+	IdProvedor varchar(30) NOT NULL);
+
+alter table Provedor
+	add constraint pk_Provedor
+	primary key (IdProvedor);
+
+create table Evento(
+	IdEvento varchar(30) NOT NULL,
+	IdEmpleado varchar(30) NOT NULL,
+	IdCliente varchar(30) NOT NULL,
+	Nombre varchar(30) NULL,
+	Tipo varchar(30) NULL,
+	AsistenciaTotal dec(10) NULL,
+	AsistenciaEsperada dec(10) NULL,
+	Presupuesto dec(10) NULL,
+	Fecha date NULL,
+	CostoTotal dec(10) NULL,
+	Descripcion varchar(30) NULL);
+
+alter table Evento
+	add constraint pk_Evento
+	primary key (IdEvento);
+
+create table Factura(
+	IdFactura varchar(30) NOT NULL,
+	IdEvento varchar(30) NOT NULL,
+	IdCliente varchar(30) NOT NULL,
+	IdServicio varchar(30) NOT NULL,
+	Fecha date NULL,
+	Detalle varchar(100) NULL,
+	Monto dec(10) NULL);
+
+alter table Factura
+	add constraint pk_Factura
+	primary key (IdFactura);
+
+create table Servicio(
+	IdServicio varchar(30) NOT NULL,
+	IdProvedor varchar(30) NOT NULL,
+	Nombre varchar(30) NULL,
+	Detalle varchar(100) NULL,
+	Precio dec(10) NULL,
+	Costo dec(10) NULL);
+
+alter table Servicio
+	add constraint pk_Servicio
+	primary key (IdServicio);
+ 
+create table Pais(
+	CodPais varchar(5) NOT NULL,
+	Descripcion varchar(50) NULL);
+
+alter table Pais
+ add constraint pk_Pais
+ primary key (CodPais);
+			
+create table Provincia(
+	CodPais varchar(5) NOT NULL,
+	CodProvincia varchar(5) NOT NULL,
+	Descripcion varchar(50) NULL);
+	
+alter table Provincia
+ add constraint pk_Provincia
+ primary key (CodPais, CodProvincia);
+	 
+create table Canton(
+	CodPais varchar(5) NOT NULL,
+	CodProvincia varchar(5) NOT NULL,
+	CodCanton varchar(5) NOT NULL,
+	Descripcion varchar(50) NULL);
+
+alter table Canton
+ add constraint pk_Canton
+ primary key (CodPais, CodProvincia,CodCanton);
+
+create table DireccionSucursal(
+	IdSucursal varchar(30) NOT NULL,
+	CodPais varchar(5) NOT NULL,
+	CodProvincia varchar(5) NOT NULL,
+	CodCanton varchar(5) NOT NULL,
+	Descripcion varchar(200) NULL);
+	
+alter table DireccionSucursal
+ add constraint pk_DireccionSucursal
+ primary key (IdSucursal, CodPais, CodProvincia, CodCanton);
+	
+create table Direccion(
+	Id varchar(30) NOT NULL,
+	Tipo varchar(30) NOT NULL,
+	CodPais varchar(5) NOT NULL,
+	CodProvincia varchar(5) NOT NULL,
+	CodCanton varchar(5) NOT NULL,
+	Descripcion varchar(200) NULL);
+	
+alter table Direccion
+ add constraint pk_Direccion
+ primary key (Id, Tipo, CodPais, CodProvincia, CodCanton);
+
+-- Foreign Keys
+
+
+alter table PersonaFisica
+add constraint fk_PersonaFisica_Persona
+foreign key (Id)
+references Persona (Id);
+
+alter table PersonaJuridica
+add constraint fk_PersonaJuridica_Persona
+foreign key (Id)
+references Persona (Id);
+
+alter table Cliente
+add constraint fk_Cliente_Persona
+foreign key (Id)
+references Persona (Id);
+
+alter table Empleado
+add constraint fk_Empleado_PersonaFisica
+foreign key (Id)
+references PersonaFisica (Id);
+
+alter table Empleado
+add constraint fk_Empleado_Sucursal
+foreign key (IdSucursal)
+references Sucursal (IdSucursal);
+
+alter table Usuario
+add constraint fk_Usuario_Empleado
+foreign key (IdEmpleado)
+references Empleado (IdEmpleado);
+
+alter table Telefono
+add constraint fk_Telefono_Persona
+foreign key (Id)
+references Persona (Id)
+
+alter table Provedor
+add constraint fk_Provedor_Persona
+foreign key (Id)
+references Persona (Id)
+
+alter table Evento
+add constraint fk_Evento_Cliente
+foreign key (IdCliente)
+references Cliente (IdCliente);
+
+alter table Evento
+add constraint fk_Evento_Empleado
+foreign key (IdEmpleado)
+references Empleado (IdEmpleado);
+
+alter table Factura
+add constraint fk_Factura_Cliente
+foreign key (IdCliente)
+references Cliente (IdCliente);
+
+alter table Factura
+add constraint fk_Factura_Evento
+foreign key (IdEvento)
+references Evento (IdEvento);
+
+alter table Factura
+add constraint fk_Factura_Servicio
+foreign key (IdServicio)
+references Servicio (IdServicio);
+
+alter table Servicio
+add constraint fk_Servicio_Provedor
+foreign key (IdProvedor)
+references Provedor (IdProvedor);
+
+alter table Provincia
+add constraint fk_Provincia_Pais
+foreign key (CodPais)
+references Pais (CodPais);
+
+alter table Canton
+add constraint fk_Canton_Provincia
+foreign key (CodPais, CodProvincia)
+references Provincia (CodPais,CodProvincia);
+
+alter table Direccion
+add constraint fk_Direccion_Persona
+foreign key (Id)
+references Persona (Id);
+
+alter table DireccionSucursal
+add constraint fk_DireccionSucursal_Sucursal
+foreign key (IdSucursal)
+references Sucursal (IdSucursal);
+
+alter table DireccionSucursal
+add constraint fk_DireccionSucursal_Canton
+foreign key (CodPais, CodProvincia, CodCanton)
+references Canton (CodPais, CodProvincia, CodCanton);
+
+alter table Direccion
+add constraint fk_Direccion_Canton
+foreign key (CodPais, CodProvincia, CodCanton)
+references Canton (CodPais, CodProvincia, CodCanton);

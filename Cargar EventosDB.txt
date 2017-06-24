@@ -1,0 +1,355 @@
+-- Pais
+
+insert into Pais values   (1,'COSTA RICA');
+insert into Pais values   (2,'NICARAGUA');
+insert into Pais values   (3,'PANAMA');
+insert into Pais values   (4,'EL SALVADOR');
+
+-- Provincia
+
+insert into Provincia values   (1,1,'SAN JOSE');
+insert into Provincia values   (1,2,'ALAJUELA');
+insert into Provincia values   (1,3,'CARTAGO');
+insert into Provincia values   (1,4,'HEREDIA');
+insert into Provincia values   (1,5,'GUANACASTE');
+insert into Provincia values   (1,6,'PUNTARENAS');
+insert into Provincia values   (1,7,'LIMON');
+
+-- Canton
+
+insert into Canton values    (1,1,1,'SAN JOSE');
+insert into Canton values    (1,1,10,'ALAJUELITA');
+insert into Canton values    (1,1,11,'VAZQUEZ DE CORONADO');
+insert into Canton values    (1,1,12,'ACOSTA');
+insert into Canton values    (1,1,13,'TIBAS');
+insert into Canton values    (1,1,14,'MORAVIA');
+insert into Canton values    (1,1,15,'MONTES DE OCA');
+insert into Canton values    (1,1,16,'TURRUBARES');
+insert into Canton values    (1,1,17,'DOTA');
+insert into Canton values    (1,1,18,'CURRIDABAT');
+insert into Canton values    (1,1,19,'PEREZ ZELEDON');
+insert into Canton values    (1,1,2,'ESCAZU');
+insert into Canton values    (1,1,20,'LEON CORTES');
+insert into Canton values    (1,1,3,'DESAMPARADOS');
+insert into Canton values    (1,1,4,'PURISCAL');
+insert into Canton values    (1,1,5,'TARRAZU');
+insert into Canton values    (1,1,6,'ASERRI');
+insert into Canton values    (1,1,7,'MORA');
+insert into Canton values    (1,1,8,'GOICOECHEA');
+insert into Canton values    (1,1,9,'SANTA ANA');
+insert into Canton values    (1,2,1,'ALAJUELA');
+insert into Canton values    (1,2,10,'SAN CARLOS');
+insert into Canton values    (1,2,11,'ALFARO RUIZ');
+insert into Canton values    (1,2,12,'VALVERDE VEGA');
+insert into Canton values    (1,2,13,'UPALA');
+insert into Canton values    (1,2,14,'LOS CHILES');
+insert into Canton values    (1,2,15,'GUATUSO');
+insert into Canton values    (1,2,16,'TURRUCARES');
+insert into Canton values    (1,2,2,'SAN RAMON');
+insert into Canton values    (1,2,3,'GRECIA');
+insert into Canton values    (1,2,4,'SAN MATEO');
+insert into Canton values    (1,2,5,'ATENAS');
+insert into Canton values    (1,2,6,'NARANJO');
+insert into Canton values    (1,2,7,'PALMARES');
+insert into Canton values    (1,2,8,'POAS');
+insert into Canton values    (1,2,9,'OROTINA');
+insert into Canton values    (1,3,1,'CARTAGO');
+insert into Canton values    (1,3,2,'PARAISO');
+insert into Canton values    (1,3,3,'LA UNION');
+insert into Canton values    (1,3,4,'JIMENEZ');
+insert into Canton values    (1,3,5,'TURRIALBA');
+insert into Canton values    (1,3,6,'ALVARADO');
+insert into Canton values    (1,3,7,'OREAMUNO');
+insert into Canton values    (1,3,8,'EL GUARCO');
+insert into Canton values    (1,4,1,'HEREDIA');
+insert into Canton values    (1,4,10,'SARAPIQUI');
+insert into Canton values    (1,4,2,'BARVA');
+insert into Canton values    (1,4,3,'SANTO DOMINGO');
+insert into Canton values    (1,4,4,'SANTA BARBARA');
+insert into Canton values    (1,4,5,'SAN RAFAEL');
+insert into Canton values    (1,4,6,'SAN ISIDRO');
+insert into Canton values    (1,4,7,'BELEN');
+insert into Canton values    (1,4,8,'FLORES');
+insert into Canton values    (1,4,9,'SAN PABLO');
+insert into Canton values    (1,5,1,'LIBERIA');
+insert into Canton values    (1,5,10,'LA CRUZ');
+insert into Canton values    (1,5,11,'HOJANCHA');
+insert into Canton values    (1,5,2,'NICOYA');
+insert into Canton values    (1,5,3,'SANTA CRUZ');
+insert into Canton values    (1,5,4,'BAGACES');
+insert into Canton values    (1,5,5,'CARRILLO');
+insert into Canton values    (1,5,6,'CA?AS');
+insert into Canton values    (1,5,7,'ABANGARES');
+insert into Canton values    (1,5,8,'TILARAN');
+insert into Canton values    (1,5,9,'NANDAYURE');
+insert into Canton values    (1,6,1,'PUNTARENAS');
+insert into Canton values    (1,6,10,'CORREDORES');
+insert into Canton values    (1,6,11,'GARABITO');
+insert into Canton values    (1,6,2,'ESPARZA');
+insert into Canton values    (1,6,3,'BUENOS AIRES');
+insert into Canton values    (1,6,4,'MONTES DE ORO');
+insert into Canton values    (1,6,5,'OSA');
+insert into Canton values    (1,6,6,'AGUIRRE');
+insert into Canton values    (1,6,7,'GOLFITO');
+insert into Canton values    (1,6,8,'COTO BRUS');
+insert into Canton values    (1,6,9,'PARRITA');
+insert into Canton values    (1,7,1,'LIMON');
+insert into Canton values    (1,7,2,'POCOCI');
+insert into Canton values    (1,7,3,'SIQUIRRES');
+insert into Canton values    (1,7,4,'TALAMANCA');
+insert into Canton values    (1,7,5,'MATINA');
+insert into Canton values    (1,7,6,'GUACIMO');
+
+-- Persona
+
+insert into Persona values (138242579488);
+insert into Persona values (13824259456);
+insert into Persona values (138242595816);
+insert into Persona values (138242597072);
+insert into Persona values (138242598328);
+insert into Persona values (138242599584);
+insert into Persona values (13824260084);
+insert into Persona values (138242602096);
+insert into Persona values (138242604608);
+insert into Persona values (138242605864);
+insert into Persona values (13824260712);
+insert into Persona values (138242610888);
+insert into Persona values (138242612144);
+insert into Persona values (1382426134);
+insert into Persona values (138242618424);
+insert into Persona values (13824261968);
+insert into Persona values (138242622192);
+insert into Persona values (1382426448);
+insert into Persona values (138242647312);
+insert into Persona values (138242648568);
+insert into Persona values (13824265108);
+insert into Persona values (138242653592);
+insert into Persona values (138242654848);
+insert into Persona values (138242656104);
+insert into Persona values (13824265736);
+insert into Persona values (138242658616);
+insert into Persona values (138242659872);
+insert into Persona values (138242661128);
+insert into Persona values (138242662384);
+insert into Persona values (138242667408);
+insert into Persona values (138242668664);
+
+insert into Persona values (31010001);
+insert into Persona values (31010002);
+insert into Persona values (31010003);
+insert into Persona values (31010004);
+insert into Persona values (31010005);
+insert into Persona values (31010006);
+insert into Persona values (31010007);
+insert into Persona values (31010008);
+insert into Persona values (31010009);
+insert into Persona values (31010010);
+
+-- PersonaFisica
+
+insert into PersonaFisica values (138242579488,'VILLEGAS','MONGE','RODRIGO',null,convert(datetime,'1980-4-6',120),'M');
+insert into PersonaFisica values (13824259456,'BARQUERO','RAMIREZ','ZULEMA',null,convert(datetime,'1980-5-24',120),'F');
+insert into PersonaFisica values (138242595816,'CA?AS','CALVO','ALLAN',null,convert(datetime,'1980-7-11',120),'M');
+insert into PersonaFisica values (138242597072,'RIVERA','VEGA','MARIA',null,convert(datetime,'1980-8-28',120),'F');
+insert into PersonaFisica values (138242598328,'ARAYA','VASQUEZ','MARIA',null,convert(datetime,'1980-10-15',120),'F');
+insert into PersonaFisica values (138242599584,'CHINCHILLA','CORDOBA','MAURICIO',null,convert(datetime,'1980-12-2',120),'M');
+insert into PersonaFisica values (13824260084,'MORERA','QUESADA','SILVIA',null,convert(datetime,'1981-1-19',120),'F');
+insert into PersonaFisica values (138242602096,'CESPEDES','RODRIGUEZ','MARIA',null,convert(datetime,'1981-3-8',120),'F');
+insert into PersonaFisica values (138242604608,'CAMPOS','QUESADA','MONICA',null,convert(datetime,'1981-4-25',120),'F');
+insert into PersonaFisica values (138242605864,'HERRERA','QUESADA','MAURICIO',null,convert(datetime,'1981-6-12',120),'M');
+insert into PersonaFisica values (13824260712,'SABORIO','VILLEGAS','1AINIER',null,convert(datetime,'1981-7-30',120),'F');
+insert into PersonaFisica values (138242610888,'CEDE?O','RIVERA','RONALD',null,convert(datetime,'1981-9-16',120),'M');
+insert into PersonaFisica values (138242612144,'COTO','ARAYA','JOSE',null,convert(datetime,'1981-11-3',120),'M');
+insert into PersonaFisica values (1382426134,'MARTINEZ','CHINCHILLA','MIRIAM',null,convert(datetime,'1981-12-21',120),'F');
+insert into PersonaFisica values (138242618424,'VALERIO','CAMPOS','KEVIN',null,convert(datetime,'1982-2-7',120),'M');
+insert into PersonaFisica values (13824261968,'MURILLO','HERRERA','MARLENE',null,convert(datetime,'1982-3-27',120),'F');
+insert into PersonaFisica values (138242622192,'CARVAJAL','SABORIO','SILVIA',null,convert(datetime,'1982-5-14',120),'F');
+insert into PersonaFisica values (1382426448,'ALVARADO','ARAYA','NORMAN',null,convert(datetime,'1982-7-1',120),'M');
+insert into PersonaFisica values (138242647312,'AMADOR','CEDE?O','CARLOS',null,convert(datetime,'1982-8-18',120),'M');
+insert into PersonaFisica values (138242648568,'MARIN','COTO','ALEXANDER',null,convert(datetime,'1982-10-5',120),'M');
+insert into PersonaFisica values (13824265108,'HERNANDEZ','AVILA','ALLAN',null,convert(datetime,'1982-11-22',120),'M');
+insert into PersonaFisica values (138242653592,'SOTELA','VALERIO','LUIS',null,convert(datetime,'1983-1-9',120),'M');
+insert into PersonaFisica values (138242654848,'SEQUEIRA','MURILLO','OLGA',null,convert(datetime,'1983-2-26',120),'F');
+insert into PersonaFisica values (138242656104,'VARGAS','CARVAJAL','WILLIAM',null,convert(datetime,'1983-4-15',120),'M');
+insert into PersonaFisica values (13824265736,'CHAVARRIA','ALVARADO','MARIA',null,convert(datetime,'1983-6-2',120),'F');
+insert into PersonaFisica values (138242658616,'BRENES','MENA','JAIME',null,convert(datetime,'1983-7-20',120),'M');
+insert into PersonaFisica values (138242659872,'OLIVARES','AMADOR','MIGUEL',null,convert(datetime,'1983-9-6',120),'M');
+insert into PersonaFisica values (138242661128,'CHAVES','MARIN','MAURICIO',null,convert(datetime,'1983-10-24',120),'M');
+insert into PersonaFisica values (138242662384,'ABARCA','CALVO','LUZBEIDI',null,convert(datetime,'1983-12-11',120),'F');
+insert into PersonaFisica values (138242667408,'CARVAJAL','SEQUEIRA','MARIA',null,convert(datetime,'1984-1-28',120),'F');
+insert into PersonaFisica values (138242668664,'ARROYO','VARGAS','YANICEL',null,convert(datetime,'1984-3-16',120),'F');
+
+-- PersonaJuridica
+
+insert into PersonaJuridica values (31010001,'1@gmail.com','JJ Barea','Empresa 1');
+insert into PersonaJuridica values (31010002,'2@gmail.com','JJ Redick','Empresa 2');
+insert into PersonaJuridica values (31010003,'3@gmail.com','Anthony Toliver','Empresa 3');
+insert into PersonaJuridica values (31010004,'4@gmail.com','Langston Galloway','Empresa 4');
+insert into PersonaJuridica values (31010005,'5@gmail.com','Bill Laimbeer','Empresa 5');
+insert into PersonaJuridica values (31010006,'6@gmail.com','Julius Erving','Empresa 6');
+insert into PersonaJuridica values (31010007,'7@gmail.com','Robert Parish','Empresa 7');
+insert into PersonaJuridica values (31010008,'8@gmail.com','Kevin McHale','Empresa 8');
+insert into PersonaJuridica values (31010009,'9@gmail.com','Larry Bird','Empresa 9');
+insert into PersonaJuridica values (31010010,'10@gmail.com','Magic Johnson','Empresa 10');
+
+-- Sucursal
+
+insert into Sucursal values (01,'Paseo Colon');
+insert into Sucursal values (02,'Escazu');
+insert into Sucursal values (03,'Pinares');
+insert into Sucursal values (04,'Alajuela');
+insert into Sucursal values (05,'Heredia');
+insert into Sucursal values (06,'Liberia');
+insert into Sucursal values (07,'Tibas');
+
+-- Empleado
+
+insert into Empleado values (138242579488,0001,null,02);
+insert into Empleado values (13824259456,0002,null,05);
+insert into Empleado values (138242595816,0003,null,01);
+insert into Empleado values (138242597072,0004,null,06);
+insert into Empleado values (138242598328,0005,null,07);
+insert into Empleado values (138242599584,0006,null,01);
+insert into Empleado values (13824260084,0007,null,03);
+insert into Empleado values (138242602096,0008,null,04);
+insert into Empleado values (138242604608,0009,null,01);
+insert into Empleado values (138242605864,0010,null,04);
+
+-- Cliente
+
+insert into Cliente values (13824260712,00001);
+insert into Cliente values (138242610888,00002);
+insert into Cliente values (138242612144,00003);
+insert into Cliente values (1382426134,00004);
+insert into Cliente values (138242618424,00005);
+insert into Cliente values (13824261968,00006);
+insert into Cliente values (138242622192,00007);
+insert into Cliente values (1382426448,00008);
+insert into Cliente values (138242647312,00009);
+insert into Cliente values (138242648568,00010);
+
+-- Provedor
+
+insert into Provedor values (31010001,001);
+insert into Provedor values (31010002,002);
+insert into Provedor values (31010003,003);
+insert into Provedor values (31010004,004);
+insert into Provedor values (31010005,005);
+
+-- Servcio
+
+insert into Servicio values (001,001,'Musica','Rock and Roll',200000,100000);
+insert into Servicio values (002,002,'Almuerzo','Comida italiana',4000,1500);
+insert into Servicio values (003,003,'Queque','Chocolate',60000,40000);
+insert into Servicio values (004,004,'Mesa','7 personas',5000,4000);
+insert into Servicio values (005,005,'Decoracion','Salon grande',300000,100000);
+
+-- Evento
+
+insert into Evento values (00001,0001,00001,'Boda 1','Boda',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00002,0001,00004,'Fiesta 1','Fiesta de cumpleannos',null,10,10000,convert(datetime,'2017-7-01',120),null,null);
+insert into Evento values (00003,0001,00003,'Quinceannos 1','Quinceannos',null,100,600000,convert(datetime,'2018-8-16',120),null,null);
+insert into Evento values (00004,0001,00002,'Fiesta Navidad 1','Fiesta de navidad',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00005,0001,00005,'Boda 2','Boda',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00006,0001,00006,'Cumpleannos 2','Fiesta de cumpleannos',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00007,0001,00007,'Evento Corporativo 1','Evento Corporativo',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00008,0001,00008,'Cumpleannos 3','Fiesta de cumpleannos',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00009,0001,00009,'Boda 3','Boda',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+insert into Evento values (00010,0001,00010,'Boda 4','Boda',null,100,5000000,convert(datetime,'2017-8-16',120),null,null);
+
+-- Factura
+
+insert into Factura values (000001,00001,00001,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000002,00001,00001,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000003,00001,00001,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000004,00001,00001,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000005,00001,00001,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000006,00002,00002,001,convert(datetime,'2017-7-01',120),null,100000);
+insert into Factura values (000007,00002,00002,002,convert(datetime,'2017-7-01',120),null,100000);
+insert into Factura values (000008,00002,00002,003,convert(datetime,'2017-7-01',120),null,100000);
+insert into Factura values (000009,00002,00002,004,convert(datetime,'2017-7-01',120),null,100000);
+insert into Factura values (000010,00002,00002,005,convert(datetime,'2017-7-01',120),null,100000);
+
+insert into Factura values (000011,00003,00003,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000012,00003,00003,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000013,00003,00003,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000014,00003,00003,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000015,00003,00003,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000016,00004,00004,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000017,00004,00004,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000018,00004,00004,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000019,00004,00004,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000020,00004,00004,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000021,00005,00005,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000022,00005,00005,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000023,00005,00005,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000024,00005,00005,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000025,00005,00005,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000026,00006,00006,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000027,00006,00006,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000028,00006,00006,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000029,00006,00006,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000030,00006,00006,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000031,00007,00007,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000032,00007,00007,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000033,00007,00007,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000034,00007,00007,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000035,00007,00007,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000036,00008,00008,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000037,00008,00008,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000038,00008,00008,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000039,00008,00008,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000040,00008,00008,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000041,00009,00009,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000042,00009,00009,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000043,00009,00009,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000044,00009,00009,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000045,00009,00009,005,convert(datetime,'2017-8-16',120),null,100000);
+
+insert into Factura values (000046,00010,00010,001,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000047,00010,00010,002,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000048,00010,00010,003,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000049,00010,00010,004,convert(datetime,'2017-8-16',120),null,100000);
+insert into Factura values (000050,00010,00010,005,convert(datetime,'2017-8-16',120),null,100000);
+
+
+-- Direccion
+
+insert into Direccion values (138242579488,'Casa',1,2,1,null);
+insert into Direccion values (13824259456,'Casa',1,1,3,null);
+insert into Direccion values (138242595816,'Casa',1,5,1,null);
+insert into Direccion values (138242597072,'Casa',1,1,2,null);
+insert into Direccion values (138242598328,'Casa',1,6,3,null);
+insert into Direccion values (138242599584,'Casa',1,1,1,null);
+insert into Direccion values (13824260084,'Casa',1,7,1,null);
+insert into Direccion values (138242602096,'Casa',1,1,4,null);
+insert into Direccion values (138242604608,'Casa',1,1,1,null);
+insert into Direccion values (138242605864,'Casa',1,4,1,null);
+insert into Direccion values (13824260712,'Casa',1,1,5,null);
+insert into Direccion values (138242610888,'Casa',1,1,1,null);
+insert into Direccion values (138242612144,'Casa',1,3,1,null);
+insert into Direccion values (1382426134,'Casa',1,1,5,null);
+insert into Direccion values (138242618424,'Casa',1,2,1,null);
+insert into Direccion values (13824261968,'Casa',1,1,1,null);
+insert into Direccion values (138242622192,'Casa',1,3,7,null);
+insert into Direccion values (1382426448,'Casa',1,1,1,null);
+insert into Direccion values (138242647312,'Casa',1,1,1,null);
+insert into Direccion values (138242648568,'Casa',1,4,8,null);
+insert into Direccion values (13824265108,'Casa',1,1,1,null);
+insert into Direccion values (138242653592,'Casa',1,5,1,null);
+insert into Direccion values (138242654848,'Casa',1,1,1,null);
+insert into Direccion values (138242656104,'Casa',1,1,8,null);
+insert into Direccion values (13824265736,'Casa',1,7,1,null);
+insert into Direccion values (138242658616,'Casa',1,1,8,null);
+insert into Direccion values (138242659872,'Casa',1,6,1,null);
+insert into Direccion values (138242661128,'Casa',1,1,1,null);
+insert into Direccion values (138242662384,'Casa',1,1,1,null);
+insert into Direccion values (138242667408,'Casa',1,5,1,null);
+insert into Direccion values (138242668664,'Casa',1,1,7,null);
