@@ -48,5 +48,45 @@ namespace Eventos
         {
 
         }
+
+        private void personaJuridicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarClientePJ pj = new AgregarClientePJ();
+            pj.Show();
+            this.Hide();
+        }
+
+        private void personaFisicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarClientePF pf = new AgregarClientePF();
+            pf.Show();
+            this.Hide();
+        }
+
+        private void listaClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaClientesForm l = new ListaClientesForm();
+            l.Show();
+            this.Hide();
+        }
+
+        private void toolStripDropDownButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarEmpleado ag = new AgregarEmpleado();
+            ag.Show();
+            this.Hide();
+        }
+
+        private void listaEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaEmpleados l = new ListaEmpleados();
+            l.Show();
+            this.Hide();
+        }
     }
 }

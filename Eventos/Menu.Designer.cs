@@ -35,17 +35,17 @@
             this.agregarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personaJuridicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personaFisicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(334, 279);
+            this.groupBox1.Size = new System.Drawing.Size(338, 279);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
@@ -69,7 +69,7 @@
             this.toolStripDropDownButton4});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(328, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(332, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -113,6 +113,36 @@
             this.toolStripDropDownButton2.Text = "Cliente";
             this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
+            // agregarClienteToolStripMenuItem
+            // 
+            this.agregarClienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personaJuridicaToolStripMenuItem,
+            this.personaFisicaToolStripMenuItem});
+            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            // 
+            // personaJuridicaToolStripMenuItem
+            // 
+            this.personaJuridicaToolStripMenuItem.Name = "personaJuridicaToolStripMenuItem";
+            this.personaJuridicaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.personaJuridicaToolStripMenuItem.Text = "Persona Juridica";
+            this.personaJuridicaToolStripMenuItem.Click += new System.EventHandler(this.personaJuridicaToolStripMenuItem_Click);
+            // 
+            // personaFisicaToolStripMenuItem
+            // 
+            this.personaFisicaToolStripMenuItem.Name = "personaFisicaToolStripMenuItem";
+            this.personaFisicaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.personaFisicaToolStripMenuItem.Text = "Persona Fisica";
+            this.personaFisicaToolStripMenuItem.Click += new System.EventHandler(this.personaFisicaToolStripMenuItem_Click);
+            // 
+            // listaClientesToolStripMenuItem
+            // 
+            this.listaClientesToolStripMenuItem.Name = "listaClientesToolStripMenuItem";
+            this.listaClientesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.listaClientesToolStripMenuItem.Text = "Lista Clientes";
+            this.listaClientesToolStripMenuItem.Click += new System.EventHandler(this.listaClientesToolStripMenuItem_Click);
+            // 
             // toolStripDropDownButton3
             // 
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -125,57 +155,6 @@
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(66, 22);
             this.toolStripDropDownButton3.Text = "Servicios";
-            // 
-            // agregarClienteToolStripMenuItem
-            // 
-            this.agregarClienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personaJuridicaToolStripMenuItem,
-            this.personaFisicaToolStripMenuItem});
-            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
-            // 
-            // listaClientesToolStripMenuItem
-            // 
-            this.listaClientesToolStripMenuItem.Name = "listaClientesToolStripMenuItem";
-            this.listaClientesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.listaClientesToolStripMenuItem.Text = "Lista Clientes";
-            // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarEmpleadoToolStripMenuItem,
-            this.listaEmpleadosToolStripMenuItem});
-            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
-            this.toolStripDropDownButton4.Text = "Empleado";
-            // 
-            // agregarEmpleadoToolStripMenuItem
-            // 
-            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar Empleado";
-            // 
-            // listaEmpleadosToolStripMenuItem
-            // 
-            this.listaEmpleadosToolStripMenuItem.Name = "listaEmpleadosToolStripMenuItem";
-            this.listaEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.listaEmpleadosToolStripMenuItem.Text = "Lista Empleados";
-            // 
-            // personaJuridicaToolStripMenuItem
-            // 
-            this.personaJuridicaToolStripMenuItem.Name = "personaJuridicaToolStripMenuItem";
-            this.personaJuridicaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.personaJuridicaToolStripMenuItem.Text = "Persona Juridica";
-            // 
-            // personaFisicaToolStripMenuItem
-            // 
-            this.personaFisicaToolStripMenuItem.Name = "personaFisicaToolStripMenuItem";
-            this.personaFisicaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.personaFisicaToolStripMenuItem.Text = "Persona Fisica";
             // 
             // agregarServicioToolStripMenuItem
             // 
@@ -195,11 +174,38 @@
             this.eliminarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.eliminarServicioToolStripMenuItem.Text = "Eliminar Servicio";
             // 
+            // toolStripDropDownButton4
+            // 
+            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarEmpleadoToolStripMenuItem,
+            this.listaEmpleadosToolStripMenuItem});
+            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
+            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
+            this.toolStripDropDownButton4.Text = "Empleado";
+            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
+            // 
+            // agregarEmpleadoToolStripMenuItem
+            // 
+            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
+            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar Empleado";
+            this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
+            // 
+            // listaEmpleadosToolStripMenuItem
+            // 
+            this.listaEmpleadosToolStripMenuItem.Name = "listaEmpleadosToolStripMenuItem";
+            this.listaEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.listaEmpleadosToolStripMenuItem.Text = "Lista Empleados";
+            this.listaEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaEmpleadosToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 296);
+            this.ClientSize = new System.Drawing.Size(462, 296);
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;
             this.Name = "Menu";

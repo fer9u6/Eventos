@@ -89,7 +89,7 @@ namespace Eventos
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AgregarCliente lc = new AgregarCliente();
+            Menu lc = new Menu();
             lc.Show();
             this.Hide();
         }
