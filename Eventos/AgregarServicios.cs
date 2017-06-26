@@ -14,6 +14,8 @@ namespace Eventos
     public partial class AgregarServicios : Form
     {
         Servicios_conexion servicio;
+        Menu menu;
+        public AgregarServicios(Menu param)
         {
             menu = param;
             InitializeComponent();
