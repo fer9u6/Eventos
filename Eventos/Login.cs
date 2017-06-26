@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data.Sql;
-using System.Data.OleDb;
-using System.Text;
-using System.Linq;
 using System.Data;
 
 namespace Eventos
@@ -43,7 +39,7 @@ namespace Eventos
             con.Open();
             string userid = textBox1.Text;
             string password = textBox2.Text;
-            SqlCommand cmd = new SqlCommand("select usuario,password from Usuario where usuario='" + textBox1.Text + "'and password='" + textBox2.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("select usuario,clave from Usuario where usuario='" + textBox1.Text + "'and clave='" + textBox2.Text + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -51,7 +47,8 @@ namespace Eventos
             {
                 MessageBox.Show("Usuario correcto, bienvenido a la aplicacion");
                 Menu menu = new Menu();
-            }
+                menu.Show();
+                this.Hide();            }
             else
             {
                 MessageBox.Show("Informacion incorrecta, por favor revise el usuario o/y contraseña.");
