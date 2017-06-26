@@ -59,6 +59,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // toolStrip1
             // 
@@ -155,24 +156,28 @@
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(66, 22);
             this.toolStripDropDownButton3.Text = "Servicios";
+            this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
             // 
             // agregarServicioToolStripMenuItem
             // 
             this.agregarServicioToolStripMenuItem.Name = "agregarServicioToolStripMenuItem";
             this.agregarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.agregarServicioToolStripMenuItem.Text = "Agregar Servicio";
+            this.agregarServicioToolStripMenuItem.Click += new System.EventHandler(this.agregarServicioToolStripMenuItem_Click);
             // 
             // buscarServicioToolStripMenuItem
             // 
             this.buscarServicioToolStripMenuItem.Name = "buscarServicioToolStripMenuItem";
             this.buscarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.buscarServicioToolStripMenuItem.Text = "Buscar Servicio";
+            this.buscarServicioToolStripMenuItem.Click += new System.EventHandler(this.buscarServicioToolStripMenuItem_Click);
             // 
             // eliminarServicioToolStripMenuItem
             // 
             this.eliminarServicioToolStripMenuItem.Name = "eliminarServicioToolStripMenuItem";
             this.eliminarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.eliminarServicioToolStripMenuItem.Text = "Eliminar Servicio";
+            this.eliminarServicioToolStripMenuItem.Click += new System.EventHandler(this.eliminarServicioToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton4
             // 

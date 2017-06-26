@@ -88,5 +88,38 @@ namespace Eventos
             l.Show();
             this.Hide();
         }
+
+        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarServicios v_agregar = new AgregarServicios(this);
+            v_agregar.Show();
+            this.Hide();
+        }
+
+        private void buscarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarServicios v_buscar = new BuscarServicios(new AgregarServicios(this));
+            v_buscar.cargar();
+            v_buscar.Show();
+            this.Hide();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eliminarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarServicios v_eliminar = new EliminarServicios(new AgregarServicios(this));
+            v_eliminar.cargar();
+            v_eliminar.Show();
+            this.Hide();
+        }
     }
 }
