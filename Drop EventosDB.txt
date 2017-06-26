@@ -1,0 +1,91 @@
+alter table PersonaFisica
+drop constraint fk_PersonaFisica_Persona
+
+alter table PersonaJuridica
+drop constraint fk_PersonaJuridica_Persona
+alter table Cliente
+drop constraint fk_Cliente_Persona
+
+alter table Empleado
+drop constraint fk_Empleado_PersonaFisica
+
+alter table Empleado
+drop constraint fk_Empleado_Sucursal
+
+alter table Telefono
+drop constraint fk_Telefono_Persona
+
+alter table Proveedor
+drop constraint fk_Proveedor_Persona
+
+alter table Evento
+drop constraint fk_Evento_Cliente
+
+alter table Evento
+drop constraint fk_Evento_Empleado
+
+alter table Factura
+drop constraint fk_Factura_Cliente
+
+alter table Factura
+drop constraint fk_Factura_Evento
+
+alter table LineaFactura
+drop constraint fk_LineaFactura_Servicio
+
+alter table LineaFactura
+drop constraint fk_LineaFactura_Factura
+
+alter table OrdenCompra
+drop constraint fk_OrdenCompra_Proveedor
+
+alter table OrdenCompra
+drop constraint fk_OrdenCompra_Evento
+
+alter table LineaOrden
+drop constraint fk_LineaOrden_Servicio
+
+alter table LineaOrden
+drop constraint fk_LineaOrden_OrdenCompra
+
+alter table Servicio
+drop constraint fk_Servicio_Proveedor
+
+alter table Provincia
+drop constraint fk_Provincia_Pais
+
+alter table Canton
+drop constraint fk_Canton_Provincia
+
+alter table Direccion
+drop constraint fk_Direccion_Persona
+
+alter table DireccionSucursal
+drop constraint fk_DireccionSucursal_Sucursal
+
+alter table DireccionSucursal
+drop constraint fk_DireccionSucursal_Canton
+
+alter table Direccion
+drop constraint fk_Direccion_Canton
+
+drop table canton
+drop table cliente
+drop table direccion
+drop table direccionsucursal
+drop table empleado
+drop table evento
+drop table factura
+drop table servicio
+drop table pais
+drop table persona
+drop table personafisica
+drop table personajuridica
+drop table proveedor
+drop table provincia
+drop table sucursal
+drop table telefono
+drop table usuario
+drop table lineafactura
+drop table ordencompra
+drop table orden linea
