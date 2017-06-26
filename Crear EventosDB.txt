@@ -1,5 +1,6 @@
 create table Persona(
-	Id varchar(30) NOT NULL);
+	Id varchar(30) NOT NULL,
+	Tipo varchar(1) not null); -- J o F
 
 alter table Persona
 	add constraint pk_Persona
@@ -55,14 +56,14 @@ alter table Empleado
 	primary key (IdEmpleado);
 
 create table Usuario(
-	IdEmpleado varchar(30) NOT NULL,
+	IdEmpleado varchar(30) NULL,
 	Usuario varchar(30) NOT NULL,
 	Rol varchar(30) NOT NULL,
-	Clave varchar(30) NULL);
+	Clave varchar(150) not NULL);
 
 alter table Usuario
 	add constraint pk_Usuario
-	primary key (IdEmpleado,Usuario);
+	primary key (Usuario);
 
 create table Telefono(
 	Id varchar(30) NOT NULL,
@@ -73,13 +74,13 @@ alter table Telefono
 	add constraint pk_Telefono
 	primary key (Id,Tipo);
 
-create table Provedor(
+create table Proveedor(
 	Id varchar(30) NOT NULL,
-	IdProvedor varchar(30) NOT NULL);
+	IdProveedor varchar(30) NOT NULL);
 
-alter table Provedor
-	add constraint pk_Provedor
-	primary key (IdProvedor);
+alter table Proveedor
+	add constraint pk_Proveedor
+	primary key (IdProveedor);
 
 create table Evento(
 	IdEvento varchar(30) NOT NULL,
@@ -102,18 +103,48 @@ create table Factura(
 	IdFactura varchar(30) NOT NULL,
 	IdEvento varchar(30) NOT NULL,
 	IdCliente varchar(30) NOT NULL,
-	IdServicio varchar(30) NOT NULL,
-	Fecha date NULL,
-	Detalle varchar(100) NULL,
+	Fecha date not NULL,
 	Monto dec(10) NULL);
 
 alter table Factura
 	add constraint pk_Factura
 	primary key (IdFactura);
 
+create table LineaFactura(
+	IdFactura varchar(30) NOT NULL,
+	IdLineaFactura varchar(30) NOT NULL,
+	IdServicio varchar(30) NOT NULL,
+	Cantidad dec(10) not NULL);
+
+alter table LineaFactura
+	add constraint pk_LineaFactura
+	primary key (IdFactura,IdLineaFactura);
+
+	
+create table OrdenCompra(
+	IdOrdenCompra varchar(30) NOT NULL,
+	IdEvento varchar(30) NOT NULL,
+	IdProveedor varchar(30) NOT NULL,
+	Fecha date not NULL,
+	Monto dec(10) NULL);
+
+alter table OrdenCompra
+	add constraint pk_OrdenCompra
+	primary key (IdOrdenCompra);
+
+create table LineaOrden(
+	IdOrdenCompra varchar(30) NOT NULL,
+	IdLineaOrden varchar(30) NOT NULL,
+	IdServicio varchar(30) NOT NULL,
+	Cantidad dec(10) not NULL);
+
+alter table LineaOrden
+	add constraint pk_LineaOrden
+	primary key (IdOrdenCompra,IdLineaOrden);
+
 create table Servicio(
 	IdServicio varchar(30) NOT NULL,
-	IdProvedor varchar(30) NOT NULL,
+	IdProveedor varchar(30) NOT NULL,
 	Nombre varchar(30) NULL,
 	Detalle varchar(100) NULL,
 	Precio dec(10) NULL,
@@ -159,7 +190,7 @@ create table DireccionSucursal(
 	
 alter table DireccionSucursal
  add constraint pk_DireccionSucursal
- primary key (IdSucursal, CodPais, CodProvincia, CodCanton);
+ primary key (IdSucursal);
 	
 create table Direccion(
 	Id varchar(30) NOT NULL,
@@ -171,7 +202,7 @@ create table Direccion(
 	
 alter table Direccion
  add constraint pk_Direccion
- primary key (Id, Tipo, CodPais, CodProvincia, CodCanton);
+ primary key (Id);
 
 -- Foreign Keys
 
@@ -201,18 +232,13 @@ add constraint fk_Empleado_Sucursal
 foreign key (IdSucursal)
 references Sucursal (IdSucursal);
 
-alter table Usuario
-add constraint fk_Usuario_Empleado
-foreign key (IdEmpleado)
-references Empleado (IdEmpleado);
-
 alter table Telefono
 add constraint fk_Telefono_Persona
 foreign key (Id)
 references Persona (Id)
 
-alter table Provedor
-add constraint fk_Provedor_Persona
+alter table Proveedor
+add constraint fk_Proveedor_Persona
 foreign key (Id)
 references Persona (Id)
 
@@ -236,15 +262,40 @@ add constraint fk_Factura_Evento
 foreign key (IdEvento)
 references Evento (IdEvento);
 
-alter table Factura
-add constraint fk_Factura_Servicio
+alter table LineaFactura
+add constraint fk_LineaFactura_Servicio
 foreign key (IdServicio)
 references Servicio (IdServicio);
 
+alter table LineaFactura
+add constraint fk_LineaFactura_Factura
+foreign key (IdFactura)
+references Factura (IdFactura);
+
+alter table OrdenCompra
+add constraint fk_OrdenCompra_Proveedor
+foreign key (IdProveedor)
+references Proveedor (IdProveedor);
+
+alter table OrdenCompra
+add constraint fk_OrdenCompra_Evento
+foreign key (IdEvento)
+references Evento (IdEvento);
+
+alter table LineaOrden
+add constraint fk_LineaOrden_Servicio
+foreign key (IdServicio)
+references Servicio (IdServicio);
+
+alter table LineaOrden
+add constraint fk_LineaOrden_OrdenCompra
+foreign key (idOrdenCompra)
+references OrdenCompra (IdOrdenCompra);
+
 alter table Servicio
-add constraint fk_Servicio_Provedor
-foreign key (IdProvedor)
-references Provedor (IdProvedor);
+add constraint fk_Servicio_Proveedor
+foreign key (IdProveedor)
+references Proveedor (IdProveedor);
 
 alter table Provincia
 add constraint fk_Provincia_Pais
