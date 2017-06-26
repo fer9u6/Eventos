@@ -96,6 +96,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eventosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="eventosDataSet1.cs">
+      <DependentUpon>eventosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="eventosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eventosDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +210,17 @@
     </None>
     <None Include="eventosDataSet.xss">
       <DependentUpon>eventosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eventosDataSet1.xsc">
+      <DependentUpon>eventosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="eventosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eventosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eventosDataSet1.xss">
+      <DependentUpon>eventosDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

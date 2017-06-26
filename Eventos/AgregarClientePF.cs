@@ -72,6 +72,7 @@ namespace Eventos
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Close();
             Menu ag = new Menu();
             ag.Show();
             this.Hide();

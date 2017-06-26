@@ -5,10 +5,18 @@
     <Setting Name="eventosConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b25083;Password=Inca2010&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b41441;Password=b41441&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b25083;Password=Inca2010</Value>
+      <Value Profile="(Default)">Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b41441;Password=b41441</Value>
+    </Setting>
+    <Setting Name="eventosConnectionStringLogin" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b25083&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID=b25083</Value>
     </Setting>
   </Settings>
 </SettingsFile>

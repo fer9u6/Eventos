@@ -27,10 +27,21 @@ namespace Eventos.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID" +
-            "=b25083;Password=Inca2010")]
+            "=b41441;Password=b41441")]
         public string eventosConnectionString {
             get {
                 return ((string)(this["eventosConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.1.4.119;Initial Catalog=eventos;Persist Security Info=True;User ID" +
+            "=b25083")]
+        public string eventosConnectionStringLogin {
+            get {
+                return ((string)(this["eventosConnectionStringLogin"]));
             }
         }
     }
