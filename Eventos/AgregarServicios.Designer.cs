@@ -42,6 +42,7 @@
             this.label_titulo = new System.Windows.Forms.Label();
             this.label_proveedor = new System.Windows.Forms.Label();
             this.comboBox_prov = new System.Windows.Forms.ComboBox();
+            this.linkLabel_menu = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button_guardar
@@ -175,11 +176,23 @@
             this.comboBox_prov.SelectedIndexChanged += new System.EventHandler(this.comboBox_prov_SelectedIndexChanged);
             this.comboBox_prov.Click += new System.EventHandler(this.comboBox_prov_Click);
             // 
+            // linkLabel_menu
+            // 
+            this.linkLabel_menu.AutoSize = true;
+            this.linkLabel_menu.Location = new System.Drawing.Point(570, 39);
+            this.linkLabel_menu.Name = "linkLabel_menu";
+            this.linkLabel_menu.Size = new System.Drawing.Size(51, 13);
+            this.linkLabel_menu.TabIndex = 14;
+            this.linkLabel_menu.TabStop = true;
+            this.linkLabel_menu.Text = "Ir a menu";
+            this.linkLabel_menu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // AgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 269);
+            this.Controls.Add(this.linkLabel_menu);
             this.Controls.Add(this.comboBox_prov);
             this.Controls.Add(this.label_proveedor);
             this.Controls.Add(this.label_titulo);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Label label_titulo;
         private System.Windows.Forms.Label label_proveedor;
         private System.Windows.Forms.ComboBox comboBox_prov;
+        private System.Windows.Forms.LinkLabel linkLabel_menu;
     }
 }

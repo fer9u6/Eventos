@@ -14,8 +14,8 @@ namespace Eventos
     public partial class AgregarServicios : Form
     {
         Servicios_conexion servicio;
-        public AgregarServicios()
         {
+            menu = param;
             InitializeComponent();
             servicio = new Servicios_conexion();
         }
@@ -103,6 +103,12 @@ namespace Eventos
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }
