@@ -121,7 +121,12 @@ namespace Eventos
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.agregarProveedor(CedTextBox.Text, NomTextBox.Text, CorreoTextBox.Text, ContTextBox.Text);
+            this.cargarTabla(dataGridView1);
+            CedTextBox.Clear();
+            NomTextBox.Clear();
+            CorreoTextBox.Clear();
+            ContTextBox.Clear();
         }
 
         private void Proveedor_Load(object sender, EventArgs e)
@@ -145,6 +150,13 @@ namespace Eventos
             {
                 dgv.Columns[i].Width = 100;
             }
+        }
+
+        private void agregarProveedor(string cedula, string nombre, string email, string contacto)
+        {
+            db.actualizarDatos("insert into Persona(Id) values('" + cedula + "')");
+            db.actualizarDatos("insert into PersonaJuridica(Id,Correo,Contacto,Nombre) values ('" + cedula + "', '" + email + "', '" + contacto + "','" + nombre + "' )");
+            db.actualizarDatos("insert into Proveedor (IdProveedor, Id) VALUES((select  top 1 IdProveedor+ 1 from Proveedor order by IdProveedor desc), '" + cedula + "')");
         }
     }
 }
