@@ -67,7 +67,7 @@ namespace Eventos
 
         private void listaClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaClientesForm l = new ListaClientesForm();
+            ListaClientes l = new ListaClientes();
             l.Show();
             this.Hide();
         }
@@ -134,6 +134,11 @@ namespace Eventos
             Proveedor p = new Proveedor();
             p.Show();
             this.Hide();
+        }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

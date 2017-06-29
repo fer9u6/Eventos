@@ -55,7 +55,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1Guardar = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,6 +181,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBoxSucursal);
+            this.groupBox1.Controls.Add(this.button1Guardar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBoxIdEmpleado);
             this.groupBox1.Controls.Add(this.textBoxEncargado);
@@ -206,7 +207,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxNom);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(31, 36);
+            this.groupBox1.Location = new System.Drawing.Point(12, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(695, 398);
             this.groupBox1.TabIndex = 16;
@@ -317,7 +318,7 @@
             // 
             // button1Guardar
             // 
-            this.button1Guardar.Location = new System.Drawing.Point(780, 411);
+            this.button1Guardar.Location = new System.Drawing.Point(614, 369);
             this.button1Guardar.Name = "button1Guardar";
             this.button1Guardar.Size = new System.Drawing.Size(75, 23);
             this.button1Guardar.TabIndex = 17;
@@ -325,33 +326,30 @@
             this.button1Guardar.UseVisualStyleBackColor = true;
             this.button1Guardar.Click += new System.EventHandler(this.button1Guardar_Click);
             // 
-            // linkLabel1
+            // button1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(787, 387);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(39, 15);
-            this.linkLabel1.TabIndex = 18;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Menu";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.button1.Location = new System.Drawing.Point(12, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "<- Inicio";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 468);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1Guardar);
+            this.ClientSize = new System.Drawing.Size(717, 441);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarEmpleado";
             this.Text = "AgregarEmpleado";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarEmpleado_FormClosed);
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -384,6 +382,6 @@
         private System.Windows.Forms.TextBox textBoxSucursal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1Guardar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }

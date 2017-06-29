@@ -61,8 +61,7 @@ namespace Eventos
 
         private void ConsultaEvento_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Menu m = new Menu();
-            m.Show();
+            Application.Exit();
         }
     }
 }

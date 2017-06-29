@@ -37,13 +37,14 @@
             this.button_buscar = new System.Windows.Forms.Button();
             this.dataGridView_buscar = new System.Windows.Forms.DataGridView();
             this.label_tuplas = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscar)).BeginInit();
             this.SuspendLayout();
             // 
             // label_nombre
             // 
             this.label_nombre.AutoSize = true;
-            this.label_nombre.Location = new System.Drawing.Point(12, 38);
+            this.label_nombre.Location = new System.Drawing.Point(12, 51);
             this.label_nombre.Name = "label_nombre";
             this.label_nombre.Size = new System.Drawing.Size(44, 13);
             this.label_nombre.TabIndex = 0;
@@ -54,7 +55,7 @@
             // 
             this.comboBox_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_nombre.FormattingEnabled = true;
-            this.comboBox_nombre.Location = new System.Drawing.Point(62, 38);
+            this.comboBox_nombre.Location = new System.Drawing.Point(62, 43);
             this.comboBox_nombre.Name = "comboBox_nombre";
             this.comboBox_nombre.Size = new System.Drawing.Size(121, 21);
             this.comboBox_nombre.TabIndex = 1;
@@ -74,7 +75,7 @@
             // label_filtro
             // 
             this.label_filtro.AutoSize = true;
-            this.label_filtro.Location = new System.Drawing.Point(298, 46);
+            this.label_filtro.Location = new System.Drawing.Point(298, 51);
             this.label_filtro.Name = "label_filtro";
             this.label_filtro.Size = new System.Drawing.Size(67, 13);
             this.label_filtro.TabIndex = 3;
@@ -95,7 +96,7 @@
             // 
             // textBox_filtro
             // 
-            this.textBox_filtro.Location = new System.Drawing.Point(371, 46);
+            this.textBox_filtro.Location = new System.Drawing.Point(371, 48);
             this.textBox_filtro.Name = "textBox_filtro";
             this.textBox_filtro.Size = new System.Drawing.Size(100, 20);
             this.textBox_filtro.TabIndex = 5;
@@ -103,7 +104,7 @@
             // 
             // button_buscar
             // 
-            this.button_buscar.Location = new System.Drawing.Point(584, 46);
+            this.button_buscar.Location = new System.Drawing.Point(562, 45);
             this.button_buscar.Name = "button_buscar";
             this.button_buscar.Size = new System.Drawing.Size(75, 23);
             this.button_buscar.TabIndex = 6;
@@ -130,11 +131,22 @@
             this.label_tuplas.Text = "Servicios";
             this.label_tuplas.Click += new System.EventHandler(this.label_tuplas_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "<- Inicio";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BuscarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 361);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label_tuplas);
             this.Controls.Add(this.dataGridView_buscar);
             this.Controls.Add(this.button_buscar);
@@ -146,6 +158,7 @@
             this.Controls.Add(this.label_nombre);
             this.Name = "BuscarServicios";
             this.Text = "Buscar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BuscarServicios_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscar)).EndInit();
             this.ResumeLayout(false);
@@ -164,5 +177,6 @@
         private System.Windows.Forms.Button button_buscar;
         private System.Windows.Forms.DataGridView dataGridView_buscar;
         private System.Windows.Forms.Label label_tuplas;
+        private System.Windows.Forms.Button button1;
     }
 }

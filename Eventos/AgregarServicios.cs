@@ -112,5 +112,17 @@ namespace Eventos
             menu.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            this.Hide();
+        }
+
+        private void AgregarServicios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
