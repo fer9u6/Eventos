@@ -102,5 +102,10 @@ namespace Eventos
         {
 
         }
+
+        private void EliminarServicios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

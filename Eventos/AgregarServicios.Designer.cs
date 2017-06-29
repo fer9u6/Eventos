@@ -42,12 +42,12 @@
             this.label_titulo = new System.Windows.Forms.Label();
             this.label_proveedor = new System.Windows.Forms.Label();
             this.comboBox_prov = new System.Windows.Forms.ComboBox();
-            this.linkLabel_menu = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_guardar
             // 
-            this.button_guardar.Location = new System.Drawing.Point(573, 158);
+            this.button_guardar.Location = new System.Drawing.Point(327, 208);
             this.button_guardar.Name = "button_guardar";
             this.button_guardar.Size = new System.Drawing.Size(75, 23);
             this.button_guardar.TabIndex = 0;
@@ -124,7 +124,7 @@
             // linkLabel_buscar
             // 
             this.linkLabel_buscar.AutoSize = true;
-            this.linkLabel_buscar.Location = new System.Drawing.Point(570, 9);
+            this.linkLabel_buscar.Location = new System.Drawing.Point(12, 179);
             this.linkLabel_buscar.Name = "linkLabel_buscar";
             this.linkLabel_buscar.Size = new System.Drawing.Size(96, 13);
             this.linkLabel_buscar.TabIndex = 9;
@@ -135,7 +135,7 @@
             // linkLabel_eliminar_servicio
             // 
             this.linkLabel_eliminar_servicio.AutoSize = true;
-            this.linkLabel_eliminar_servicio.Location = new System.Drawing.Point(570, 26);
+            this.linkLabel_eliminar_servicio.Location = new System.Drawing.Point(12, 208);
             this.linkLabel_eliminar_servicio.Name = "linkLabel_eliminar_servicio";
             this.linkLabel_eliminar_servicio.Size = new System.Drawing.Size(82, 13);
             this.linkLabel_eliminar_servicio.TabIndex = 10;
@@ -176,23 +176,22 @@
             this.comboBox_prov.SelectedIndexChanged += new System.EventHandler(this.comboBox_prov_SelectedIndexChanged);
             this.comboBox_prov.Click += new System.EventHandler(this.comboBox_prov_Click);
             // 
-            // linkLabel_menu
+            // button1
             // 
-            this.linkLabel_menu.AutoSize = true;
-            this.linkLabel_menu.Location = new System.Drawing.Point(570, 39);
-            this.linkLabel_menu.Name = "linkLabel_menu";
-            this.linkLabel_menu.Size = new System.Drawing.Size(51, 13);
-            this.linkLabel_menu.TabIndex = 14;
-            this.linkLabel_menu.TabStop = true;
-            this.linkLabel_menu.Text = "Ir a menu";
-            this.linkLabel_menu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.button1.Location = new System.Drawing.Point(15, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "<- Inicio";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 269);
-            this.Controls.Add(this.linkLabel_menu);
+            this.ClientSize = new System.Drawing.Size(416, 243);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox_prov);
             this.Controls.Add(this.label_proveedor);
             this.Controls.Add(this.label_titulo);
@@ -209,6 +208,7 @@
             this.Controls.Add(this.button_guardar);
             this.Name = "AgregarServicios";
             this.Text = "Servicios";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarServicios_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,6 +231,6 @@
         private System.Windows.Forms.Label label_titulo;
         private System.Windows.Forms.Label label_proveedor;
         private System.Windows.Forms.ComboBox comboBox_prov;
-        private System.Windows.Forms.LinkLabel linkLabel_menu;
+        private System.Windows.Forms.Button button1;
     }
 }

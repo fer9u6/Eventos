@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Eventos
 {
-    public partial class ListaClientesForm : Form
+    public partial class ListaClientes : Form
     {
         Cliente cliente;
-        public ListaClientesForm()
+        public ListaClientes()
         {
             InitializeComponent();
             cliente = new Cliente();
@@ -99,6 +99,18 @@ namespace Eventos
             Menu ag = new Menu();
             ag.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            this.Hide();
+        }
+
+        private void ListaClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

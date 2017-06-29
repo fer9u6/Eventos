@@ -117,11 +117,11 @@
     <Compile Include="Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaClientesForm.cs">
+    <Compile Include="ListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaClientesForm.Designer.cs">
-      <DependentUpon>ListaClientesForm.cs</DependentUpon>
+    <Compile Include="ListaClientes.Designer.cs">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaEmpleados.cs">
       <SubType>Form</SubType>
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaClientesForm.resx">
-      <DependentUpon>ListaClientesForm.cs</DependentUpon>
+    <EmbeddedResource Include="ListaClientes.resx">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaEmpleados.resx">
       <DependentUpon>ListaEmpleados.cs</DependentUpon>

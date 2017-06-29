@@ -35,6 +35,7 @@
             this.label_tuplas = new System.Windows.Forms.Label();
             this.dataGridView_eliminar = new System.Windows.Forms.DataGridView();
             this.button_eliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eliminar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // label_nombre
             // 
             this.label_nombre.AutoSize = true;
-            this.label_nombre.Location = new System.Drawing.Point(12, 38);
+            this.label_nombre.Location = new System.Drawing.Point(12, 57);
             this.label_nombre.Name = "label_nombre";
             this.label_nombre.Size = new System.Drawing.Size(44, 13);
             this.label_nombre.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             this.comboBox_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_nombre.FormattingEnabled = true;
-            this.comboBox_nombre.Location = new System.Drawing.Point(62, 38);
+            this.comboBox_nombre.Location = new System.Drawing.Point(62, 49);
             this.comboBox_nombre.Name = "comboBox_nombre";
             this.comboBox_nombre.Size = new System.Drawing.Size(121, 21);
             this.comboBox_nombre.TabIndex = 2;
@@ -97,19 +98,29 @@
             // 
             // button_eliminar
             // 
-            this.button_eliminar.Location = new System.Drawing.Point(189, 38);
+            this.button_eliminar.Location = new System.Drawing.Point(198, 49);
             this.button_eliminar.Name = "button_eliminar";
-            this.button_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.button_eliminar.Size = new System.Drawing.Size(74, 23);
             this.button_eliminar.TabIndex = 9;
             this.button_eliminar.Text = "Eliminar";
             this.button_eliminar.UseVisualStyleBackColor = true;
             this.button_eliminar.Click += new System.EventHandler(this.button_eliminar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "<- Inicio";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // EliminarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 371);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_eliminar);
             this.Controls.Add(this.dataGridView_eliminar);
             this.Controls.Add(this.label_tuplas);
@@ -119,6 +130,7 @@
             this.Controls.Add(this.label_titulo);
             this.Name = "EliminarServicios";
             this.Text = "Eliminar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EliminarServicios_FormClosed);
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_eliminar)).EndInit();
             this.ResumeLayout(false);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Label label_tuplas;
         private System.Windows.Forms.DataGridView dataGridView_eliminar;
         private System.Windows.Forms.Button button_eliminar;
+        private System.Windows.Forms.Button button1;
     }
 }

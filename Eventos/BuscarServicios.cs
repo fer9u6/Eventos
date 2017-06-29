@@ -140,5 +140,17 @@ namespace Eventos
             //Se pone por defecto la primera entrada del combobox seleccionada
             combobox.SelectedIndex = 0;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            this.Hide();
+        }
+
+        private void BuscarServicios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
