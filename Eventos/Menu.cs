@@ -41,7 +41,9 @@ namespace Eventos
 
         private void buscarEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ConsultaEvento ce = new ConsultaEvento();
+            ce.Show();
+            this.Hide();
         }
 
         private void Menu_Load(object sender, EventArgs e)

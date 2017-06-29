@@ -51,5 +51,18 @@ namespace Eventos
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+            this.Hide();
+        }
+
+        private void ConsultaEvento_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Menu m = new Menu();
+            m.Show();
+        }
     }
 }
