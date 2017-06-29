@@ -25,12 +25,9 @@ namespace Eventos
         {
             //Para agregar un cliente se debe agregar las tablas: persona, tipo de persona(fisica o juridica) y cliente
 
-            String insertarp = "insert into Persona(Id) values('" + cedula + "')";
-            bd.actualizarDatos(insertarp);
-            String insertarpf = "insert into PersonaFisica(Id,Apellido1,Apellido2,Nombre,Correo,FecNacimiento,Sexo) values ('" + cedula + "', '" + ape1 + "','" + ape2 + "', '" + nombre + "', '" + email + "','" + fechaNac + "','" + genero.ToString() + "' )";
-            bd.actualizarDatos(insertarpf);
-            String insertarc = "insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')";
-            return bd.actualizarDatos(insertarc);
+            bd.actualizarDatos("insert into Persona(Id) values('" + cedula + "')");
+            bd.actualizarDatos("insert into PersonaFisica(Id,Apellido1,Apellido2,Nombre,Correo,FecNacimiento,Sexo) values ('" + cedula + "', '" + ape1 + "','" + ape2 + "', '" + nombre + "', '" + email + "','" + fechaNac + "','" + genero.ToString() + "' )");
+            return bd.actualizarDatos("insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')");
         }
 
 
@@ -43,12 +40,9 @@ namespace Eventos
         {
             //Para agregar un cliente se debe agregar las tablas: persona, tipo de persona(fisica o juridica) y cliente
 
-            String insertarp = "insert into Persona(Id) values('" + cedula + "')";
-            bd.actualizarDatos(insertarp);
-            String insertarpf = "insert into PersonaJuridica(Id,Correo,Contacto,Nombre) values ('" + cedula + "', '" + email + "', '" + contacto + "','" + nombre + "' )";
-            bd.actualizarDatos(insertarpf);
-            String insertarc = "insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')";
-            return bd.actualizarDatos(insertarc);
+            bd.actualizarDatos("insert into Persona(Id) values('" + cedula + "')");
+            bd.actualizarDatos("insert into PersonaJuridica(Id,Correo,Contacto,Nombre) values ('" + cedula + "', '" + email + "', '" + contacto + "','" + nombre + "' )");
+            return bd.actualizarDatos("insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')");
         }
 
 

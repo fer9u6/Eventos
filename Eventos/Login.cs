@@ -7,9 +7,12 @@ namespace Eventos
 {
     public partial class Login : Form
     {
+        LoginHandler lh;
+
         public Login()
         {
             InitializeComponent();
+            lh = new LoginHandler();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -34,32 +37,10 @@ namespace Eventos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            int resultado = lh.checkPassword(textBox1.Text, textBox2.Text);
+            if(resultado == 0)
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=10.1.4.119;Initial Catalog=eventos;Integrated Security=False;User ID=B41441;Password=b41441;Connect Timeout=45;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                con.Open();
-                string userid = textBox1.Text;
-                string password = textBox2.Text;
-                SqlCommand cmd = new SqlCommand("select usuario,clave from Usuario where usuario='" + textBox1.Text + "'and clave='" + textBox2.Text + "'", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show("Usuario correcto, bienvenido a la aplicacion");
-                    con.Close();
-                    Menu menu = new Menu();
-                    menu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Informacion incorrecta, por favor revise el usuario o/y contraseña.");
-                }
-            }catch(SqlException ex)
-            {
-                MessageBox.Show("Conexion a la base de datos no disponible. Asegurese de estar conectado a la red correcta.");
+                this.Hide();
             }
         }
 
@@ -70,12 +51,31 @@ namespace Eventos
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            CrearNuevoUsuario cu = new CrearNuevoUsuario();
+            cu.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                int resultado = lh.checkPassword(textBox1.Text, textBox2.Text);
+                if (resultado == 0)
+                {
+                    this.Hide();
+                }
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

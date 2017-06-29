@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.Configuration;
-// Namespace de acceso a base de datos
 using System.Data;
 using System.Data.SqlClient;
 
