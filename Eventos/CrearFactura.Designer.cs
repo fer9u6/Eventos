@@ -2,7 +2,7 @@
 {
     partial class CrearFactura
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -72,7 +72,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 44);
+            this.label4.Location = new System.Drawing.Point(24, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 38);
             this.label4.TabIndex = 11;
