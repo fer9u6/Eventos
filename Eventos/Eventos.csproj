@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Aroche-Delta-Cup.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -185,6 +182,9 @@
     <EmbeddedResource Include="ConsultaEvento.resx">
       <DependentUpon>ConsultaEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearFactura.resx">
+      <DependentUpon>CrearFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearNuevoUsuario.resx">
       <DependentUpon>CrearNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,7 +217,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
@@ -256,21 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eventos1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eventos2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eventos3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eventos4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Aroche-Delta-Cup.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
