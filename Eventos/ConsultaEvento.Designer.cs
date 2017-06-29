@@ -228,6 +228,7 @@
             this.Name = "ConsultaEvento";
             this.Text = "ConsultaEvento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultaEvento_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConsultaEvento_FormClosed);
             this.Load += new System.EventHandler(this.ConsultaEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
