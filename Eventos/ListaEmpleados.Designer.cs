@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaEmpleados));
             this.dataGridViewEmpleados = new System.Windows.Forms.DataGridView();
             this.comboBox1Ape = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.textBoxCed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaEmpleados";
             this.Text = "ListaEmpleados";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaEmpleados_FormClosed);

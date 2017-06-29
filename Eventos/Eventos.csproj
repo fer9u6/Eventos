@@ -185,6 +185,9 @@
     <EmbeddedResource Include="ConsultaEvento.resx">
       <DependentUpon>ConsultaEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearFactura.resx">
+      <DependentUpon>CrearFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearNuevoUsuario.resx">
       <DependentUpon>CrearNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>

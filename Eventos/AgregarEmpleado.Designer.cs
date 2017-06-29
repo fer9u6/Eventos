@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEmpleado));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.textBoxApe1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxSucursal = new System.Windows.Forms.TextBox();
+            this.button1Guardar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxIdEmpleado = new System.Windows.Forms.TextBox();
             this.textBoxEncargado = new System.Windows.Forms.TextBox();
@@ -54,7 +56,6 @@
             this.radioButton1F = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1Guardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -222,6 +223,16 @@
             this.textBoxSucursal.Size = new System.Drawing.Size(128, 22);
             this.textBoxSucursal.TabIndex = 26;
             // 
+            // button1Guardar
+            // 
+            this.button1Guardar.Location = new System.Drawing.Point(614, 369);
+            this.button1Guardar.Name = "button1Guardar";
+            this.button1Guardar.Size = new System.Drawing.Size(75, 23);
+            this.button1Guardar.TabIndex = 17;
+            this.button1Guardar.Text = "Guardar";
+            this.button1Guardar.UseVisualStyleBackColor = true;
+            this.button1Guardar.Click += new System.EventHandler(this.button1Guardar_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -316,16 +327,6 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Fecha de nacimiento";
             // 
-            // button1Guardar
-            // 
-            this.button1Guardar.Location = new System.Drawing.Point(614, 369);
-            this.button1Guardar.Name = "button1Guardar";
-            this.button1Guardar.Size = new System.Drawing.Size(75, 23);
-            this.button1Guardar.TabIndex = 17;
-            this.button1Guardar.Text = "Guardar";
-            this.button1Guardar.UseVisualStyleBackColor = true;
-            this.button1Guardar.Click += new System.EventHandler(this.button1Guardar_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 7);
@@ -343,6 +344,7 @@
             this.ClientSize = new System.Drawing.Size(717, 441);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarEmpleado";
             this.Text = "AgregarEmpleado";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarEmpleado_FormClosed);

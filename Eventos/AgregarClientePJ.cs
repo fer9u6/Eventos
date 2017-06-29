@@ -65,5 +65,10 @@ namespace Eventos
         {
             Application.Exit();
         }
+
+        private void AgregarClientePJ_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

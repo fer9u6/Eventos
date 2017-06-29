@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarServicios));
             this.label_nombre = new System.Windows.Forms.Label();
             this.comboBox_nombre = new System.Windows.Forms.ComboBox();
             this.label_titulo = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             this.Controls.Add(this.label_titulo);
             this.Controls.Add(this.comboBox_nombre);
             this.Controls.Add(this.label_nombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuscarServicios";
             this.Text = "Buscar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BuscarServicios_FormClosed);

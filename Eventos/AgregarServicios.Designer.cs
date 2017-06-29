@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarServicios));
             this.button_guardar = new System.Windows.Forms.Button();
             this.label_nombre = new System.Windows.Forms.Label();
             this.label_detalle = new System.Windows.Forms.Label();
@@ -206,6 +207,7 @@
             this.Controls.Add(this.label_detalle);
             this.Controls.Add(this.label_nombre);
             this.Controls.Add(this.button_guardar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarServicios";
             this.Text = "Servicios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AgregarServicios_FormClosed);

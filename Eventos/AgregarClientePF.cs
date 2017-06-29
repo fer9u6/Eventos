@@ -89,6 +89,11 @@ namespace Eventos
         {
             Application.Exit();
         }
+
+        private void AgregarClientePF_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
