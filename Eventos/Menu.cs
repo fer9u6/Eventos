@@ -128,5 +128,12 @@ namespace Eventos
         {
             Application.Exit();
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Proveedor p = new Proveedor();
+            p.Show();
+            this.Hide();
+        }
     }
 }

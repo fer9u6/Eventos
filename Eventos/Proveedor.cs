@@ -12,9 +12,14 @@ namespace Eventos
 {
     public partial class Proveedor : Form
     {
+        AccesoBaseDatos db;
+
+        
         public Proveedor()
         {
             InitializeComponent();
+            db = new AccesoBaseDatos();
+            this.cargarTabla(dataGridView1);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -39,7 +44,9 @@ namespace Eventos
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -119,9 +126,25 @@ namespace Eventos
 
         private void Proveedor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'eventosDataSet.Proveedor' table. You can move, or remove it, as needed.
-            this.proveedorTableAdapter.Fill(this.eventosDataSet.Proveedor);
+            
+        }
 
+        private void proveedorBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarTabla(DataGridView dgv)
+        {
+            DataTable tabla = db.ejecutarConsultaTabla("Select p.IdProveedor, p.Id, pj.Nombre, pj.Contacto, pj.Correo from Proveedor p, PersonaJuridica pj where p.Id = pj.Id");
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dgv.DataSource = bindingSource;
+            for (int i = 0; i < dgv.ColumnCount; i++)
+            {
+                dgv.Columns[i].Width = 100;
+            }
         }
     }
 }
