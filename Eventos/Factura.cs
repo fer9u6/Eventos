@@ -54,7 +54,9 @@ namespace Eventos
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,14 +71,13 @@ namespace Eventos
 
         private void Factura_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'eventosDataSet.Servicio' table. You can move, or remove it, as needed.
-            this.servicioTableAdapter.Fill(this.eventosDataSet.Servicio);
-            // TODO: This line of code loads data into the 'eventosDataSet.Cliente' table. You can move, or remove it, as needed.
-            this.clienteTableAdapter.Fill(this.eventosDataSet.Cliente);
-            // TODO: This line of code loads data into the 'eventosDataSet.Evento' table. You can move, or remove it, as needed.
-            this.eventoTableAdapter.Fill(this.eventosDataSet.Evento);
             // TODO: This line of code loads data into the 'eventosDataSet.Factura' table. You can move, or remove it, as needed.
             this.facturaTableAdapter.Fill(this.eventosDataSet.Factura);
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
