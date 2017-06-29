@@ -84,6 +84,12 @@
     <Compile Include="ConsultaEvento.Designer.cs">
       <DependentUpon>ConsultaEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearFactura.Designer.cs">
+      <DependentUpon>CrearFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

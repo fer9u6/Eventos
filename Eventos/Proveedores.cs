@@ -28,7 +28,7 @@ namespace Eventos
             DataTable dt = new DataTable();
             da.Fill(dt);
             int numProv = dt.Rows.Count + 1;
-            db.actualizarDatos("insert into Persona(Id) values('" + cedula + "')");
+            db.actualizarDatos("insert into Persona(Id, Tipo) values('" + cedula + "', 'J')");
             db.actualizarDatos("insert into PersonaJuridica(Id,Correo,Contacto,Nombre) values ('" + cedula + "', '" + email + "', '" + contacto + "','" + nombre + "' )");
             return db.actualizarDatos("insert into Proveedor (Id, IdProveedor) VALUES('" + cedula + "', '" + numProv + "')");
         }

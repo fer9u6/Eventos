@@ -140,5 +140,19 @@ namespace Eventos
         {
             Application.Exit();
         }
+
+        private void verFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura f = new Factura();
+            f.Show();
+            this.Hide();
+        }
+
+        private void crearFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrearFactura cf = new CrearFactura();
+            cf.Show();
+            this.Hide();
+        }
     }
 }

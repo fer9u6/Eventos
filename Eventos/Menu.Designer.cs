@@ -228,12 +228,14 @@
             this.crearFacturaToolStripMenuItem.Name = "crearFacturaToolStripMenuItem";
             this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearFacturaToolStripMenuItem.Text = "Crear Factura";
+            this.crearFacturaToolStripMenuItem.Click += new System.EventHandler(this.crearFacturaToolStripMenuItem_Click);
             // 
             // verFacturasToolStripMenuItem
             // 
             this.verFacturasToolStripMenuItem.Name = "verFacturasToolStripMenuItem";
             this.verFacturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verFacturasToolStripMenuItem.Text = "Ver Facturas";
+            this.verFacturasToolStripMenuItem.Click += new System.EventHandler(this.verFacturasToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
