@@ -13,12 +13,14 @@ namespace Eventos
     public partial class Proveedor : Form
     {
         AccesoBaseDatos db;
+        Proveedores prov;
 
         
         public Proveedor()
         {
             InitializeComponent();
             db = new AccesoBaseDatos();
+            prov = new Proveedores();
             this.cargarTabla(dataGridView1);
         }
 
@@ -121,12 +123,20 @@ namespace Eventos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.agregarProveedor(CedTextBox.Text, NomTextBox.Text, CorreoTextBox.Text, ContTextBox.Text);
+            int resultado = prov.agregarProveedor(CedTextBox.Text, NomTextBox.Text, CorreoTextBox.Text, ContTextBox.Text);
+            if (resultado == 0)
+            {
+                MessageBox.Show("El proveedor ha sido agregado exitosamente.");
+                CedTextBox.Clear();
+                NomTextBox.Clear();
+                CorreoTextBox.Clear();
+                ContTextBox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error a la hora de agregar proveedor.");
+            }
             this.cargarTabla(dataGridView1);
-            CedTextBox.Clear();
-            NomTextBox.Clear();
-            CorreoTextBox.Clear();
-            ContTextBox.Clear();
         }
 
         private void Proveedor_Load(object sender, EventArgs e)
@@ -150,13 +160,6 @@ namespace Eventos
             {
                 dgv.Columns[i].Width = 100;
             }
-        }
-
-        private void agregarProveedor(string cedula, string nombre, string email, string contacto)
-        {
-            db.actualizarDatos("insert into Persona(Id) values('" + cedula + "')");
-            db.actualizarDatos("insert into PersonaJuridica(Id,Correo,Contacto,Nombre) values ('" + cedula + "', '" + email + "', '" + contacto + "','" + nombre + "' )");
-            db.actualizarDatos("insert into Proveedor (IdProveedor, Id) VALUES((select  top 1 IdProveedor+ 1 from Proveedor order by IdProveedor desc), '" + cedula + "')");
         }
     }
 }

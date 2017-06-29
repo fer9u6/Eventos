@@ -156,6 +156,7 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proveedores.cs" />
     <Compile Include="Servicios_conexion.cs" />
     <EmbeddedResource Include="AgregarClientePF.resx">
       <DependentUpon>AgregarClientePF.cs</DependentUpon>
