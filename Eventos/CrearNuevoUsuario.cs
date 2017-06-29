@@ -57,10 +57,20 @@ namespace Eventos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.Show();
+            Login login = new Login();
+            login.Show();
             this.Hide();
 
+        }
+
+        private void CrearNuevoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearNuevoUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
