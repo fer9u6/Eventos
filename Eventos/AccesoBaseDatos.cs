@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 /*Cambiar el namespace para que funcione!!*/
 namespace Eventos
@@ -26,22 +27,35 @@ namespace Eventos
          */
         public SqlDataReader ejecutarConsulta(String consulta)
         {
+            Boolean error = false;
             //Prepara una nueva conexión a la bd y la abre
             SqlConnection sqlConnection = new SqlConnection(conexion);
-            sqlConnection.Open();
-
-            SqlDataReader datos = null;
-            SqlCommand comando = null;
-
             try
-            {
-                //Ejecuta la consulta sql recibida por parámetro y la carga en un datareader
-                comando = new SqlCommand(consulta, sqlConnection);
-                datos = comando.ExecuteReader();
+            { 
+                sqlConnection.Open();
             }
             catch (SqlException ex)
             {
+                error = true;
+                MessageBox.Show("Conexion a la base de datos no disponible. Asegurese de estar conectado a la red correcta.");
+            }
+            SqlDataReader datos = null;
+            if (error != true)
+            {
 
+                
+                SqlCommand comando = null;
+
+                try
+                {
+                    //Ejecuta la consulta sql recibida por parámetro y la carga en un datareader
+                    comando = new SqlCommand(consulta, sqlConnection);
+                    datos = comando.ExecuteReader();
+                }
+                catch (SqlException ex)
+                {
+
+                }
             }
             return datos;
         }
@@ -78,7 +92,14 @@ namespace Eventos
 
             //Prepara una nueva conexión a la bd y la abre
             SqlConnection sqlConnection = new SqlConnection(conexion);
-            sqlConnection.Open();
+            try
+            {
+                sqlConnection.Open();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Conexion a la base de datos no disponible. Asegurese de estar conectado a la red correcta.");
+            }
 
             SqlCommand cons = new SqlCommand(consulta, sqlConnection);
 

@@ -61,8 +61,15 @@ namespace Eventos
             return bd.actualizarDatos(insertar);
         }
 
+        
+
         public DataTable obtenerTabla(string filtroNombre, string filtroGeneral)
         {
+            if (filtroNombre == "Seleccione")
+            {
+                filtroNombre = null;
+            }
+            else { }
             DataTable tabla = null;
             try
             {
@@ -74,19 +81,19 @@ namespace Eventos
                 }
                 //Si el filtro de nombre no es nulo carga los estudiantes cuyo
                 //nombre sea el que tiene el filtro
-                else if (filtroNombre != "Seleccione")
+                else if (filtroNombre != null && filtroGeneral ==null) 
                 {
                     tabla = bd.ejecutarConsultaTabla("Select * from Servicio where Nombre = '" + filtroNombre + "'");
                 }
                 //Si el filtro general no es nulo cargan los estudiantes con
                 //atributos que contengan ese filtro como parte del atributo(like)
-                else if (filtroGeneral != null)
+                else if (filtroGeneral != null && filtroNombre == null)
                 {
                     tabla = bd.ejecutarConsultaTabla("select * from Servicio a where Nombre like '%" + filtroGeneral + "%' or Detalle like %" + filtroGeneral + "%;");
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que
                 // coincidan con ambos filtros
-                else if (filtroGeneral != null && filtroNombre != "Seleccione")
+                else if (filtroGeneral != null && filtroNombre != null)
                 {
                     tabla = bd.ejecutarConsultaTabla("Select * from estudiante where nombre = '" + filtroNombre + "' && nombre like '%" + filtroGeneral + "%' OR  detalle like '%" + filtroGeneral + "%;");
                 }
