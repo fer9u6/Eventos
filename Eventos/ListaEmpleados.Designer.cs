@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaEmpleados));
             this.dataGridViewEmpleados = new System.Windows.Forms.DataGridView();
             this.comboBox1Ape = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1_buscar = new System.Windows.Forms.Button();
             this.textBoxCed = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,15 +59,15 @@
             this.comboBox1Ape.Size = new System.Drawing.Size(121, 23);
             this.comboBox1Ape.TabIndex = 10;
             // 
-            // button1
+            // button1_buscar
             // 
-            this.button1.Location = new System.Drawing.Point(506, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1_buscar.Location = new System.Drawing.Point(506, 110);
+            this.button1_buscar.Name = "button1_buscar";
+            this.button1_buscar.Size = new System.Drawing.Size(75, 23);
+            this.button1_buscar.TabIndex = 9;
+            this.button1_buscar.Text = "Buscar";
+            this.button1_buscar.UseVisualStyleBackColor = true;
+            this.button1_buscar.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxCed
             // 
@@ -92,9 +92,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Apellido";
+            this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
@@ -137,7 +137,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridViewEmpleados);
             this.Controls.Add(this.comboBox1Ape);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button1_buscar);
             this.Controls.Add(this.textBoxCed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -156,7 +156,7 @@
 
         private System.Windows.Forms.DataGridView dataGridViewEmpleados;
         private System.Windows.Forms.ComboBox comboBox1Ape;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button1_buscar;
         private System.Windows.Forms.TextBox textBoxCed;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

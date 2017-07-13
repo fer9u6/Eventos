@@ -83,7 +83,7 @@ namespace Eventos
         private void button1_Click(object sender, EventArgs e)
         {
             //Llena el datagridview con los estudiantes que contengan en alguno de sus campos el texto del textbox txtBuscar             
-            llenarTabla(dataGridViewEmpleados, null, textBoxCed.Text);
+            llenarTabla(dataGridViewEmpleados, comboBox1Ape.Text, textBoxCed.Text);
 
         }
 

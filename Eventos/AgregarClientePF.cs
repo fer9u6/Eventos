@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace Eventos
     public partial class AgregarClientePF : Form
     {
         Cliente cliente;
+        Direccion dir;
         public AgregarClientePF()
         {
             InitializeComponent();
             cliente = new Cliente();
+            dir = new Direccion();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -38,16 +41,25 @@ namespace Eventos
             {
                 genero = 'M';
             }
-
             genero.ToString();
 
-            int resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxidCliente.Text);
+            int resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxidCliente.Text, textBoxTel.Text);
+
+            string tipo = "casa";
+            string codPais = dir.obtenerCodPais(comboBoxPais.Text);
+            string codProvincia = dir.obtenerCodProvincia(comboBoxPro.Text);
+            string codCanton = dir.obtenerCodCanton(comboBoxCan.Text);
+
+            MessageBox.Show("pruebas" + codPais + " " + codProvincia + " " + codCanton + " ");
+
+            int resultadodir = dir.agregarDireccion(textBoxCed.Text, tipo, codPais, codProvincia, codCanton, textBoxDesc.Text);
+
 
 
             //Si la inserción devuelve un 0 la inserción fue exitosa, por lo que se muestra un mensaje de éxito             
             if (resultado == 0)
             {
-                MessageBox.Show("El cliente ha sido agregado exitosamente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("El cliente y ha sido agregado exitosamente", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
                 //Se limpian las cajas de texto para permitir al usuario añadir un nuevo estudiante cuando lo desee                                 
                 textBoxNom.Clear();
                 textBoxApe1.Clear();
@@ -64,7 +76,73 @@ namespace Eventos
             }
 
         }
+        private void llenarComboboxPais(ComboBox combobox)
+        {             //Se obtiene un dataReader con todos los nombres de los empleados de la base de datos             
+            SqlDataReader datos = dir.obtenerPaises();
 
+            /*Si existen datos en la base de datos se carga como primer elemento del combobox un dato "Seleccione"  y luego se cargan todos los datos de la base de datos*/
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }             /*Si no hay tuplas en la base de datos se limpia el combobox y se carga unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+          
+            combobox.SelectedIndex = 0;
+
+        }
+
+        private void llenarComboboxProvincia(ComboBox combobox)
+        {             //Se obtiene un dataReader con todos los nombres de los empleados de la base de datos             
+            SqlDataReader datos = dir.obtenerProvincias();
+
+            /*Si existen datos en la base de datos se carga como primer elemento del combobox un dato "Seleccione"  y luego se cargan todos los datos de la base de datos*/
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }             /*Si no hay tuplas en la base de datos se limpia el combobox y se carga unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+
+            combobox.SelectedIndex = 0;
+
+        }
+        private void llenarComboboxCantones(ComboBox combobox)
+        {             //Se obtiene un dataReader con todos los nombres de los empleados de la base de datos             
+            SqlDataReader datos = dir.obtenerCantones();
+
+            /*Si existen datos en la base de datos se carga como primer elemento del combobox un dato "Seleccione"  y luego se cargan todos los datos de la base de datos*/
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }             /*Si no hay tuplas en la base de datos se limpia el combobox y se carga unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+
+            combobox.SelectedIndex = 0;
+
+        }
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
@@ -91,6 +169,13 @@ namespace Eventos
         }
 
         private void AgregarClientePF_Load(object sender, EventArgs e)
+        {
+            llenarComboboxPais(comboBoxPais);
+            llenarComboboxProvincia(comboBoxPro);
+            llenarComboboxCantones(comboBoxCan);
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }

@@ -82,6 +82,24 @@ namespace Eventos
             return table;
         }
 
+        public string ejecutarConsultaValor(string consulta) {
+            //Prepara una nueva conexión a la bd y la abre
+            SqlConnection sqlConnection = new SqlConnection(conexion);
+            sqlConnection.Open();
+
+            SqlCommand comando = new SqlCommand(consulta, sqlConnection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(comando);
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+            DataTable table = new DataTable();
+            string resultado;
+
+            dataAdapter.Fill(table);
+            resultado = table.Rows[0][0].ToString();
+
+            return resultado;
+
+        }
+
         /*Método para ejecutar un insert, update o delete 
          Recibe: la sentencia sql a ejecutar
          Modifica: realiza el cambio en la base de datos de acuerdo al tipo de sentencia sql

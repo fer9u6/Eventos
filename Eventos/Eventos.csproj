@@ -99,6 +99,7 @@
     <Compile Include="CrearNuevoUsuario.Designer.cs">
       <DependentUpon>CrearNuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Direccion.cs" />
     <Compile Include="EliminarServicios.cs">
       <SubType>Form</SubType>
     </Compile>

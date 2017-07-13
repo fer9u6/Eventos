@@ -27,7 +27,7 @@ namespace Eventos
          * Retorna: Ningún valor*/
         private void llenarCombobox(ComboBox combobox)
         {             //Se obtiene un dataReader con todos los nombres de los clientes de la base de datos             
-            SqlDataReader datos = cliente.obtenerListaNombresClientes();
+            SqlDataReader datos = cliente.obtenerListaApellidosClientes();
 
             /*Si existen datos en la base de datos se carga como primer elemento del combobox un dato "Seleccione"  y luego se cargan todos los datos de la base de datos*/
             if (datos != null)
@@ -58,7 +58,7 @@ namespace Eventos
         private void llenarTabla(DataGridView dataGridView, string filtroCombobox, string filtroGeneral)
         {
             /*obtiene un dataTable con todos los clientes que se encuentran en la base de datos que cumplan las condiciones  de los dos filtros que el método recibe por parámetro*/
-            DataTable tabla = cliente.obtenerClientes(filtroCombobox, filtroGeneral);
+            DataTable tabla = cliente.obtenerClientes(filtroCombobox, filtroGeneral,comboBoxTipoCliente.Text);
 
             //Se inicializa el source para cargar el datagridview y se le asigna el dataTable obtenido             
             BindingSource bindingSource = new BindingSource();
@@ -85,13 +85,14 @@ namespace Eventos
             llenarCombobox(comboBoxApe);
             //Llena el datagridview de estudiantes con todas las tuplas de cliente de la interfaz             
             llenarTabla(dataGridViewClientes, null, null);
+            comboBoxTipoCliente.Items.Add("Persona Fisica");
+            comboBoxTipoCliente.Items.Add("Persona Juridica");
 
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            //Llena el datagridview con los estudiantes que contengan en alguno de sus campos el texto del textbox txtBuscar             
-            llenarTabla(dataGridViewClientes, null, textBoxCed.Text);
+        {         
+            llenarTabla(dataGridViewClientes, comboBoxApe.Text, textBoxCed.Text);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -111,6 +112,21 @@ namespace Eventos
         private void ListaClientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCed_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

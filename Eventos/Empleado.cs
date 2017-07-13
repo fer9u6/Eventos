@@ -27,8 +27,8 @@ namespace Eventos
         public int agregarEmpleado(string cedula, string nombre, string ape1, string ape2, string email, string fechaNac, char genero, string idEmpleado, string idencargado, string idsucursal)
         {
             //Para agregar un empleado se debe agregar las tablas: persona, tipo de persona(fisica o juridica) y empleado
-
-            String insertarp = "insert into Persona(Id) values('" + cedula + "')";
+            string tipop = "F";
+            String insertarp = "insert into Persona(Id,Tipo) values('" + cedula + "','"+tipop + "')";
             bd.actualizarDatos(insertarp);
             String insertarpf = "insert into PersonaFisica(Id,Apellido1,Apellido2,Nombre,Correo,FecNacimiento,Sexo) values ('" + cedula + "', '" + ape1 + "','" + ape2 + "', '" + nombre + "', '" + email + "','" + fechaNac + "','" + genero + "' )";
             bd.actualizarDatos(insertarpf);
@@ -62,6 +62,11 @@ namespace Eventos
          * Retorna: el dataTable con los datos*/
         public DataTable obtenerEmpleados(string filtroNombre, string filtroGeneral)
         {
+            if (filtroNombre == "Seleccione")
+            {
+                filtroNombre = null;
+            }
+            else { }
             DataTable tabla = null;
             try
             {
@@ -71,13 +76,13 @@ namespace Eventos
                     tabla = bd.ejecutarConsultaTabla("select * from Empleado e,PersonaFisica p where e.Id = p.Id");
                 }
                 //Si el filtro de nombre no es nulo carga los estudiantes cuyo nombre sea el que tiene el filtro                 
-                else if (filtroNombre != null)
+                else if (filtroNombre != null )
                 {
 
-                    tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and Nombre ='" + filtroNombre + "'");
+                    tabla = bd.ejecutarConsultaTabla("Select * from PersonaFisica p where Nombre ='" + filtroNombre + "'");
                 }
                 //Si el filtro general no es nulo cargan los estudiantes con atributos que contengan ese filtro como parte del atributo (like)                
-                else if (filtroGeneral != null)
+                else if (filtroGeneral != null && filtroNombre == null)
                 {
                     tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and (Nombre like '%" + filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral + "%' OR Apellido2 like '%" + filtroGeneral + "%' OR cedula like '%" + filtroGeneral + "%')");
                 }

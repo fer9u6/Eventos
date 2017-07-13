@@ -33,6 +33,7 @@ namespace Eventos
                 cor.Clear();
                 ced.Clear();
                 con.Clear();
+                idc.Clear();
 
             }             //si la inserción devuelve un código de error se puede validar con un mensaje de error personalizado             
             else if (resultado == 2627)
