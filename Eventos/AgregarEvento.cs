@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Eventos
 {
     public partial class AgregarEvento : Form
+
     {
+        AgregaEvento ae = new AgregaEvento();
+
         public AgregarEvento()
         {
             InitializeComponent();
@@ -69,6 +73,77 @@ namespace Eventos
         private void AgregarEvento_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llenarCombobox1(ComboBox combobox) {
+            combobox.Items.Clear();
+            //Se obtiene un dataReader con todos los nombres de los estudiantes de
+            //la base de datos
+            SqlDataReader datos = ae.obtenerEmpleados();
+            /*Si existen datos en la base de datos se carga como primer elemento del
+            combobox un dato "Seleccione"
+            y luego se cargan todos los datos de la base de datos*/
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            /*Si no hay tuplas en la base de datos se limpia el combobox y se carga
+            unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            //Se pone por defecto la primera entrada del combobox seleccionada
+            combobox.SelectedIndex = 0;
+        }
+
+        private void llenarCombobox2(ComboBox combobox)
+        {
+            combobox.Items.Clear();
+            //Se obtiene un dataReader con todos los nombres de los estudiantes de
+            //la base de datos
+            SqlDataReader datos = ae.obtenerClientes();
+            /*Si existen datos en la base de datos se carga como primer elemento del
+            combobox un dato "Seleccione"
+            y luego se cargan todos los datos de la base de datos*/
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            /*Si no hay tuplas en la base de datos se limpia el combobox y se carga
+            unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            //Se pone por defecto la primera entrada del combobox seleccionada
+            combobox.SelectedIndex = 0;
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            llenarCombobox1(comboBox1);
+        }
+
+        private void comboBox2_Click_1(object sender, EventArgs e)
+        {
+            llenarCombobox2(comboBox2);
         }
     }
 }
