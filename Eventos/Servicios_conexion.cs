@@ -83,19 +83,23 @@ namespace Eventos
                 //nombre sea el que tiene el filtro
                 else if (filtroNombre != null && filtroGeneral ==null) 
                 {
+                    
                     tabla = bd.ejecutarConsultaTabla("Select * from Servicio where Nombre = '" + filtroNombre + "'");
                 }
                 //Si el filtro general no es nulo cargan los estudiantes con
                 //atributos que contengan ese filtro como parte del atributo(like)
                 else if (filtroGeneral != null && filtroNombre == null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("select * from Servicio a where Nombre like '%" + filtroGeneral + "%' or Detalle like %" + filtroGeneral + "%;");
+                    tabla = bd.ejecutarConsultaTabla("select * from Servicio a where Nombre like '%"+filtroGeneral+ "%' or Detalle like '%"+filtroGeneral+"%'");
+                    
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que
                 // coincidan con ambos filtros
                 else if (filtroGeneral != null && filtroNombre != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select * from estudiante where nombre = '" + filtroNombre + "' && nombre like '%" + filtroGeneral + "%' OR  detalle like '%" + filtroGeneral + "%;");
+
+                    tabla = bd.ejecutarConsultaTabla("Select * from Servicio where nombre = '"+filtroNombre+"' or nombre like '%"+filtroGeneral+"%' OR  detalle like '%"+filtroGeneral+"%'");
+                    
                 }
             }
             catch (SqlException ex)
