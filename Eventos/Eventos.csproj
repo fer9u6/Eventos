@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoBaseDatos.cs" />
+    <Compile Include="AgregaEvento.cs" />
     <Compile Include="AgregarClientePF.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -75,7 +75,7 @@ namespace Eventos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Menu m = new Menu();
+            Login m = new Login();
             m.Show();
             this.Hide();
         }
