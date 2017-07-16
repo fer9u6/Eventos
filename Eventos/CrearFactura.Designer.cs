@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearFactura));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEvento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox_servicio = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,8 +44,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,14 +69,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // comboBoxEvento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(74, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxEvento.FormattingEnabled = true;
+            this.comboBoxEvento.Location = new System.Drawing.Point(74, 135);
+            this.comboBoxEvento.Name = "comboBoxEvento";
+            this.comboBoxEvento.Size = new System.Drawing.Size(198, 21);
+            this.comboBoxEvento.TabIndex = 12;
+            this.comboBoxEvento.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -87,13 +87,13 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Evento";
             // 
-            // comboBox2
+            // comboBoxCliente
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(74, 173);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(198, 21);
-            this.comboBox2.TabIndex = 14;
+            this.comboBoxCliente.FormattingEnabled = true;
+            this.comboBoxCliente.Location = new System.Drawing.Point(74, 173);
+            this.comboBoxCliente.Name = "comboBoxCliente";
+            this.comboBoxCliente.Size = new System.Drawing.Size(198, 21);
+            this.comboBoxCliente.TabIndex = 14;
             // 
             // label1
             // 
@@ -104,13 +104,13 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Cliente";
             // 
-            // comboBox3
+            // comboBox_servicio
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(74, 210);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(198, 21);
-            this.comboBox3.TabIndex = 16;
+            this.comboBox_servicio.FormattingEnabled = true;
+            this.comboBox_servicio.Location = new System.Drawing.Point(74, 210);
+            this.comboBox_servicio.Name = "comboBox_servicio";
+            this.comboBox_servicio.Size = new System.Drawing.Size(198, 21);
+            this.comboBox_servicio.TabIndex = 16;
             // 
             // label3
             // 
@@ -186,11 +186,11 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.comboBox_servicio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.comboBoxCliente);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBoxEvento);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(-2, -9);
@@ -199,16 +199,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(74, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Agregar otro Servicio";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label10
             // 
@@ -219,6 +209,16 @@
             this.label10.Size = new System.Drawing.Size(213, 47);
             this.label10.TabIndex = 36;
             this.label10.Text = "Crear Factura";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(74, 243);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(197, 23);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Agregar otro Servicio";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // CrearFactura
             // 
@@ -241,11 +241,11 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEvento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox_servicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

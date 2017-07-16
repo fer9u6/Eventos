@@ -25,7 +25,7 @@ namespace Eventos
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Información Correcta.");
+                    //MessageBox.Show("Información Correcta.");
                     con.Close();
                     Menu menu = new Menu();
                     menu.Show();
