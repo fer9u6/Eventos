@@ -202,7 +202,7 @@ namespace Eventos
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Visite el siguiente link"+ "\n" + "https://docs.google.com/document/d/1oWkHzjg6FgReTuZCWMO11WP4jEto0AjFoCQrZ0dMutY/edit?usp=sharing");
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1oWkHzjg6FgReTuZCWMO11WP4jEto0AjFoCQrZ0dMutY/edit?usp=sharing");
         }
     }
 }
