@@ -40,6 +40,10 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.tbTotal = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.btnReporte = new System.Windows.Forms.Button();
+>>>>>>> master
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,11 +171,28 @@
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+<<<<<<< HEAD
+=======
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(399, 111);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(144, 23);
+            this.btnReporte.TabIndex = 12;
+            this.btnReporte.Text = "Generar Reporte PDF";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+>>>>>>> master
             // BuscarOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 385);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.btnReporte);
+>>>>>>> master
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.tbTotal);
             this.Controls.Add(this.lbTotal);
@@ -206,5 +227,9 @@
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Button btnBorrar;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btnReporte;
+>>>>>>> master
     }
 }

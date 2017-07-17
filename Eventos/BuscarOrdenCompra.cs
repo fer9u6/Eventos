@@ -199,5 +199,12 @@ namespace Eventos
             cbOrden.Items.Clear();
         }
 
+<<<<<<< HEAD
+=======
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> master
     }
 }
