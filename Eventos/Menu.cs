@@ -192,5 +192,17 @@ namespace Eventos
             facturaPDF.Show();
             this.Hide();
         }
+
+        private void reporteServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte_Servicio v = new Reporte_Servicio();
+            v.Show();
+            this.Hide();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Visite el siguiente link"+ "\n" + "https://docs.google.com/document/d/1oWkHzjg6FgReTuZCWMO11WP4jEto0AjFoCQrZ0dMutY/edit?usp=sharing");
+        }
     }
 }

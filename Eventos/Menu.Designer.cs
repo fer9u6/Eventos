@@ -43,20 +43,20 @@
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.crearFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.generarPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,7 +175,7 @@
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarServicioToolStripMenuItem,
             this.buscarServicioToolStripMenuItem,
-            this.eliminarServicioToolStripMenuItem});
+            this.reporteServicioToolStripMenuItem});
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -186,23 +186,23 @@
             // agregarServicioToolStripMenuItem
             // 
             this.agregarServicioToolStripMenuItem.Name = "agregarServicioToolStripMenuItem";
-            this.agregarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.agregarServicioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.agregarServicioToolStripMenuItem.Text = "Agregar Servicio";
             this.agregarServicioToolStripMenuItem.Click += new System.EventHandler(this.agregarServicioToolStripMenuItem_Click);
             // 
             // buscarServicioToolStripMenuItem
             // 
             this.buscarServicioToolStripMenuItem.Name = "buscarServicioToolStripMenuItem";
-            this.buscarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.buscarServicioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.buscarServicioToolStripMenuItem.Text = "Buscar Servicio";
             this.buscarServicioToolStripMenuItem.Click += new System.EventHandler(this.buscarServicioToolStripMenuItem_Click);
             // 
-            // eliminarServicioToolStripMenuItem
+            // reporteServicioToolStripMenuItem
             // 
-            this.eliminarServicioToolStripMenuItem.Name = "eliminarServicioToolStripMenuItem";
-            this.eliminarServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.eliminarServicioToolStripMenuItem.Text = "Eliminar Servicio";
-            this.eliminarServicioToolStripMenuItem.Click += new System.EventHandler(this.eliminarServicioToolStripMenuItem_Click);
+            this.reporteServicioToolStripMenuItem.Name = "reporteServicioToolStripMenuItem";
+            this.reporteServicioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.reporteServicioToolStripMenuItem.Text = "Reporte Servicio";
+            this.reporteServicioToolStripMenuItem.Click += new System.EventHandler(this.reporteServicioToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton4
             // 
@@ -258,6 +258,13 @@
             this.verFacturasToolStripMenuItem.Text = "Ver Facturas";
             this.verFacturasToolStripMenuItem.Click += new System.EventHandler(this.verFacturasToolStripMenuItem_Click);
             // 
+            // generarPDFToolStripMenuItem
+            // 
+            this.generarPDFToolStripMenuItem.Name = "generarPDFToolStripMenuItem";
+            this.generarPDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generarPDFToolStripMenuItem.Text = "Generar PDF";
+            this.generarPDFToolStripMenuItem.Click += new System.EventHandler(this.generarPDFToolStripMenuItem_Click);
+            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -303,6 +310,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
             this.toolStripButton2.Text = "Ayuda";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // pictureBox1
             // 
@@ -314,13 +322,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // generarPDFToolStripMenuItem
-            // 
-            this.generarPDFToolStripMenuItem.Name = "generarPDFToolStripMenuItem";
-            this.generarPDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.generarPDFToolStripMenuItem.Text = "Generar PDF";
-            this.generarPDFToolStripMenuItem.Click += new System.EventHandler(this.generarPDFToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -363,7 +364,6 @@
         private System.Windows.Forms.ToolStripMenuItem listaEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarServicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
         private System.Windows.Forms.ToolStripMenuItem crearFacturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verFacturasToolStripMenuItem;
@@ -375,5 +375,6 @@
         private System.Windows.Forms.ToolStripMenuItem agregarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarPDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteServicioToolStripMenuItem;
     }
 }
