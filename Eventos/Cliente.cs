@@ -29,8 +29,11 @@ namespace Eventos
             string tipo = "F";
             string tipot = "R";
             bd.actualizarDatos("insert into Persona(Id,Tipo) values('" + cedula + "','" + tipo +"')");
-            bd.actualizarDatos("insert into Telefono(Id,Tipo,Numero)values('" + cedula + "','" + tipot + "','" + telefono + "') " );
             bd.actualizarDatos("insert into PersonaFisica(Id,Apellido1,Apellido2,Nombre,Correo,FecNacimiento,Sexo) values ('" + cedula + "', '" + ape1 + "','" + ape2 + "', '" + nombre + "', '" + email + "','" + fechaNac + "','" + genero.ToString() + "' )");
+            if (telefono != "")
+            {
+                bd.actualizarDatos("insert into Telefono(Id,Tipo,Numero)values('" + cedula + "','" + tipot + "','" + telefono + "') ");
+            }
             return bd.actualizarDatos("insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')");
         }
 
@@ -71,6 +74,19 @@ namespace Eventos
             return datos;
         }
 
+        public DataTable obtenerClientesMasEventos() {
+            DataTable tabla = null;
+            try
+            {
+                tabla = bd.ejecutarConsultaTabla("Select top 5  c.IdCliente,c.Id, count(e.IdEvento)cantidadEventos from Cliente c ,Evento e where e.IdCliente = c.IdCliente group by c.IdCliente,c.Id  order by 3 desc");
+
+            }
+            catch (SqlException ex)
+            {
+            }
+
+            return tabla;
+        }
 
         /*Método para obtener los clientes de la base de datos          
          * Recibe: dos tipos de filtros por los cuales se pueden filtrar las tuplas          
@@ -95,7 +111,7 @@ namespace Eventos
                         tabla = bd.ejecutarConsultaTabla("select * from Cliente c, PersonaFisica p  where c.Id = p.Id ");
                     }
                     else {
-                        tabla = bd.ejecutarConsultaTabla("select * from Cliente c, PersonaJuridica p ");
+                        tabla = bd.ejecutarConsultaTabla("select * from PersonaJuridica p ");
                     }
                 }
                 //Si el filtro apellido y general nulo                
@@ -106,7 +122,7 @@ namespace Eventos
                         tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaFisica p where c.Id = p.Id and p.Apellido1 ='" + filtroApellido+ "'or p.Apellido2 = '"+filtroApellido+"'");
                     }
                     else {
-                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaJuridica  p  ");
+                        tabla = bd.ejecutarConsultaTabla("Select * from PersonaJuridica  p  ");
                     }
                 }
                 //Si el filtro general no es nulo cargan losclientes con atributos que contengan ese filtro como parte del atributo (like)                
@@ -118,7 +134,7 @@ namespace Eventos
                     }
                     else
                     {
-                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaJuridica p where  (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%')");
+                        tabla = bd.ejecutarConsultaTabla("Select * from PersonaJuridica p where  (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%')");
                     }
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que coincidan con ambos filtros                 
@@ -126,11 +142,11 @@ namespace Eventos
                 {
                     if (tipoP == "Persona Fisica")
                     {
-                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaFisica p where c.Id = p.Id and( p.Apellido1='" + filtroApellido + "' &&  nombre like '%" + filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral + "%' OR Apellido2 like '%" + filtroGeneral + "%' OR Id like '%" + filtroGeneral + "%')");
+                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaFisica p where c.Id = p.Id and( p.Apellido1='" + filtroApellido + "' &&  p.nombre like '%" + filtroGeneral + "%' OR p.Apellido1 like '%" + filtroGeneral + "%' OR p.Apellido2 like '%" + filtroGeneral + "%' OR p.Id like '%" + filtroGeneral + "%')");
                     }
                     else
                     {
-                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaJuridica p where (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%')");
+                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c PersonaJuridica p where (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%')");
                     }
                 }
 

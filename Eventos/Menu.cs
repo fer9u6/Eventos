@@ -159,5 +159,12 @@ namespace Eventos
         {
 
         }
+
+        private void mejoresClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteClientes mc = new ReporteClientes();
+            mc.Show();
+            this.Hide();
+        }
     }
 }
