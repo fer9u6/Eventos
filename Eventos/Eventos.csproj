@@ -161,6 +161,12 @@
     </Compile>
     <Compile Include="LoginHandler.cs" />
     <Compile Include="OrdenCompra.cs" />
+    <Compile Include="Reporte Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte Servicio.Designer.cs">
+      <DependentUpon>Reporte Servicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte Servicio.resx">
+      <DependentUpon>Reporte Servicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteClientes.resx">
       <DependentUpon>ReporteClientes.cs</DependentUpon>

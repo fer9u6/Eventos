@@ -185,5 +185,12 @@ namespace Eventos
             mc.Show();
             this.Hide();
         }
+
+        private void reporteServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte_Servicio mc = new Reporte_Servicio();
+            mc.Show();
+            this.Hide();
+        }
     }
 }
