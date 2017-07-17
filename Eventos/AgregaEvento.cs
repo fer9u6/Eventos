@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Eventos
 {
@@ -21,6 +24,34 @@ namespace Eventos
             return bd.actualizarDatos("INSERT INTO Evento (IdEvento, IdEmpleado, IdCliente, Nombre, Tipo, AsistenciaTotal, AsistenciaEsperada, Presupuesto, Fecha, CostoTotal, Descripcion) VALUES('" + IdEvento + "','" + IdEmpleado + "','" + IdCliente + "','" + Nombre + "','" + Tipo + "','" + AsistenciaTotal + "','" + AsistenciaEsperada + "','" + Presupuesto + "','" + Fecha + "','" + CostoTotal + "','" + Descripcion + "')");
         }
 
+        }
+
+        public SqlDataReader obtenerEmpleados()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("select IdEmpleado from Empleado a");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            return datos;
+        }
+
+        public SqlDataReader obtenerClientes()
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = bd.ejecutarConsulta("select IdCliente from Cliente");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            return datos;
         }
 
     }

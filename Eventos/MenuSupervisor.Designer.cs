@@ -1,6 +1,6 @@
 ﻿namespace Eventos
 {
-    partial class Menu
+    partial class MenuSupervisor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSupervisor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +39,6 @@
             this.personaJuridicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personaFisicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mejoresClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,7 @@
             this.crearFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -85,17 +84,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -128,8 +116,7 @@
             this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarClienteToolStripMenuItem,
-            this.listaClientesToolStripMenuItem,
-            this.mejoresClientesToolStripMenuItem});
+            this.listaClientesToolStripMenuItem});
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
@@ -143,7 +130,7 @@
             this.personaJuridicaToolStripMenuItem,
             this.personaFisicaToolStripMenuItem});
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             // 
             // personaJuridicaToolStripMenuItem
@@ -163,17 +150,9 @@
             // listaClientesToolStripMenuItem
             // 
             this.listaClientesToolStripMenuItem.Name = "listaClientesToolStripMenuItem";
-            this.listaClientesToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.listaClientesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.listaClientesToolStripMenuItem.Text = "Lista Clientes";
             this.listaClientesToolStripMenuItem.Click += new System.EventHandler(this.listaClientesToolStripMenuItem_Click);
-            // 
-            // mejoresClientesToolStripMenuItem
-            // 
-            this.mejoresClientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mejoresClientesToolStripMenuItem.Name = "mejoresClientesToolStripMenuItem";
-            this.mejoresClientesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.mejoresClientesToolStripMenuItem.Text = "Reporte Clientes";
-            this.mejoresClientesToolStripMenuItem.Click += new System.EventHandler(this.mejoresClientesToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -273,6 +252,17 @@
             this.toolStripButton1.Text = "Proveedor";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -330,6 +320,5 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripMenuItem mejoresClientesToolStripMenuItem;
     }
 }

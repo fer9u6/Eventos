@@ -61,7 +61,31 @@ namespace Eventos
             SqlDataReader datos = null;
             try
             {
-                datos = bd.ejecutarConsulta("select descripcion from Canton ");
+                    datos = bd.ejecutarConsulta("select descripcion from Canton ");
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show("error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+
+            return datos;
+        }
+
+        public SqlDataReader obtenerCantonesP(String codProvincia)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                if (codProvincia == null)
+                {
+                    datos = bd.ejecutarConsulta("select descripcion from Canton ");
+                }
+                else
+                {
+                    datos = bd.ejecutarConsulta("select descripcion from Canton  where CodProvincia ='" + codProvincia + "'");
+                }
+
             }
             catch (SqlException ex)
             {
@@ -74,7 +98,7 @@ namespace Eventos
 
         //recibe como parametro la descripcion y devuelve el codigo
         public string obtenerCodPais(string d) {
-
+            
             string codPais = bd.ejecutarConsultaValor("select codPais from Pais where Descripcion= '" + d + "'");
             return codPais;
         }
