@@ -160,6 +160,24 @@
       <DependentUpon>AgregarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginHandler.cs" />
+    <Compile Include="MenuVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVendedor.Designer.cs">
+      <DependentUpon>MenuVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSupervisor.Designer.cs">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSecretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSecretaria.Designer.cs">
+      <DependentUpon>MenuSecretaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdenCompra.cs" />
     <Compile Include="Reporte Servicio.cs">
       <SubType>Form</SubType>
@@ -236,6 +254,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVendedor.resx">
+      <DependentUpon>MenuVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSupervisor.resx">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSecretaria.resx">
+      <DependentUpon>MenuSecretaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte Servicio.resx">
       <DependentUpon>Reporte Servicio.cs</DependentUpon>
