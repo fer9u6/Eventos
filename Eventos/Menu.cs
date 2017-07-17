@@ -166,5 +166,24 @@ namespace Eventos
             mc.Show();
             this.Hide();
         }
+
+        private void toolStripDropDownButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarOrdenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarOrdenCompra mc = new AgregarOrdenCompra(this);
+            mc.Show();
+            this.Hide();
+        }
+
+        private void buscarOrdenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarOrdenCompra mc = new BuscarOrdenCompra();
+            mc.Show();
+            this.Hide();
+        }
     }
 }
