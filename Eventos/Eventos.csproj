@@ -71,6 +71,12 @@
     <Compile Include="AgregarEmpleado.Designer.cs">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarOrdenCompra.Designer.cs">
+      <DependentUpon>AgregarOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarServicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
       <DependentUpon>AgregarServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarUsuario.cs" />
+    <Compile Include="BuscarOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarOrdenCompra.Designer.cs">
+      <DependentUpon>BuscarOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarServicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,7 @@
       <DependentUpon>AgregarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginHandler.cs" />
+    <Compile Include="OrdenCompra.cs" />
     <Compile Include="ReporteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,8 +192,14 @@
     <EmbeddedResource Include="AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarOrdenCompra.resx">
+      <DependentUpon>AgregarOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarServicios.resx">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarOrdenCompra.resx">
+      <DependentUpon>BuscarOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarServicios.resx">
       <DependentUpon>BuscarServicios.cs</DependentUpon>
