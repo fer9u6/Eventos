@@ -81,7 +81,7 @@ namespace Eventos
             DataTable tabla = null;
             try
             {
-                tabla = bd.ejecutarConsultaTabla("select oc.fecha as Fecha, oc.idordencompra as IdOrden, e.nombre as Evento, pj.nombre as Proveedor, oc.monto as Monto from ordencompra oc, evento e, personajuridica pj, proveedor p where oc.idevento = e.idevento and oc.idproveedor = p.idproveedor and p.id = pj.id order by cast(idordencompra as int) asc");
+                tabla = bd.ejecutarConsultaTabla("select oc.fecha as Fecha, oc.idordencompra as IdOrden, e.nombre as Evento, pj.nombre as Proveedor, oc.monto as Monto from ordencompra oc, evento e, personajuridica pj, proveedor p where oc.idevento = e.idevento and oc.idproveedor = p.idproveedor and p.id = pj.id order by cast(idordencompra as int) desc");
             }
             catch (SqlException)
             {
