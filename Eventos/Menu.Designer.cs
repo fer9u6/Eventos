@@ -44,7 +44,6 @@
             this.agregarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +56,7 @@
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.reporteServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +67,7 @@
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Location = new System.Drawing.Point(-3, -14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(492, 43);
+            this.groupBox1.Size = new System.Drawing.Size(464, 43);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -86,7 +86,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(486, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(458, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -205,13 +205,6 @@
             this.eliminarServicioToolStripMenuItem.Text = "Eliminar Servicio";
             this.eliminarServicioToolStripMenuItem.Click += new System.EventHandler(this.eliminarServicioToolStripMenuItem_Click);
             // 
-            // reporteServicioToolStripMenuItem
-            // 
-            this.reporteServicioToolStripMenuItem.Name = "reporteServicioToolStripMenuItem";
-            this.reporteServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.reporteServicioToolStripMenuItem.Text = "Reporte Servicio";
-            this.reporteServicioToolStripMenuItem.Click += new System.EventHandler(this.reporteServicioToolStripMenuItem_Click);
-            // 
             // toolStripDropDownButton4
             // 
             this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -308,7 +301,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(45, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
             this.toolStripButton2.Text = "Ayuda";
             // 
             // pictureBox1
@@ -316,18 +309,25 @@
             this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
             this.pictureBox1.Location = new System.Drawing.Point(12, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(477, 289);
+            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // reporteServicioToolStripMenuItem
+            // 
+            this.reporteServicioToolStripMenuItem.Name = "reporteServicioToolStripMenuItem";
+            this.reporteServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.reporteServicioToolStripMenuItem.Text = "Reporte Servicio";
+            this.reporteServicioToolStripMenuItem.Click += new System.EventHandler(this.reporteServicioToolStripMenuItem_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(494, 329);
+            this.ClientSize = new System.Drawing.Size(462, 296);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;
