@@ -51,12 +51,11 @@
             this.crearFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.reporteServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,8 +174,7 @@
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarServicioToolStripMenuItem,
             this.buscarServicioToolStripMenuItem,
-            this.eliminarServicioToolStripMenuItem,
-            this.reporteServicioToolStripMenuItem});
+            this.eliminarServicioToolStripMenuItem});
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -268,6 +266,26 @@
             this.toolStripButton1.Text = "Proveedor";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
+            this.toolStripButton2.Text = "Ayuda";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // toolStripDropDownButton6
             // 
             this.toolStripDropDownButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -294,33 +312,6 @@
             this.buscarOrdenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarOrdenToolStripMenuItem.Text = "Buscar Orden";
             this.buscarOrdenToolStripMenuItem.Click += new System.EventHandler(this.buscarOrdenToolStripMenuItem_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
-            this.toolStripButton2.Text = "Ayuda";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // reporteServicioToolStripMenuItem
-            // 
-            this.reporteServicioToolStripMenuItem.Name = "reporteServicioToolStripMenuItem";
-            this.reporteServicioToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.reporteServicioToolStripMenuItem.Text = "Reporte Servicio";
-            this.reporteServicioToolStripMenuItem.Click += new System.EventHandler(this.reporteServicioToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -374,6 +365,5 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton6;
         private System.Windows.Forms.ToolStripMenuItem agregarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarOrdenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteServicioToolStripMenuItem;
     }
 }
