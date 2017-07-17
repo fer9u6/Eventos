@@ -84,6 +84,7 @@
             this.Controls.Add(this.buttonReporte);
             this.Name = "ReporteClientes";
             this.Text = "MejoresClientes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReporteClientes_FormClosed);
             this.Load += new System.EventHandler(this.MejoresClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.ResumeLayout(false);

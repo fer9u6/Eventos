@@ -155,5 +155,9 @@ namespace Eventos
             Application.Exit();
         }
 
+        private void ReporteClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
