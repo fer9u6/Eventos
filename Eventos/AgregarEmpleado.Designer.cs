@@ -54,10 +54,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxSucursal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBoxIdEmpleado = new System.Windows.Forms.TextBox();
             this.textBoxEncargado = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1FecNac = new System.Windows.Forms.DateTimePicker();
             this.radioButton2M = new System.Windows.Forms.RadioButton();
             this.radioButton1F = new System.Windows.Forms.RadioButton();
@@ -185,10 +183,8 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.textBoxSucursal);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBoxIdEmpleado);
             this.groupBox1.Controls.Add(this.textBoxEncargado);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.dateTimePicker1FecNac);
             this.groupBox1.Controls.Add(this.radioButton2M);
             this.groupBox1.Controls.Add(this.radioButton1F);
@@ -324,13 +320,6 @@
             this.label12.Text = "IdSucursal\r\n";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // textBoxIdEmpleado
-            // 
-            this.textBoxIdEmpleado.Location = new System.Drawing.Point(460, 94);
-            this.textBoxIdEmpleado.Name = "textBoxIdEmpleado";
-            this.textBoxIdEmpleado.Size = new System.Drawing.Size(128, 22);
-            this.textBoxIdEmpleado.TabIndex = 24;
-            // 
             // textBoxEncargado
             // 
             this.textBoxEncargado.Location = new System.Drawing.Point(460, 138);
@@ -347,16 +336,6 @@
             this.label11.Size = new System.Drawing.Size(67, 15);
             this.label11.TabIndex = 22;
             this.label11.Text = "Encargado";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(328, 97);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 15);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "IdEmpleado";
             // 
             // dateTimePicker1FecNac
             // 
@@ -466,10 +445,8 @@
         private System.Windows.Forms.RadioButton radioButton1F;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxIdEmpleado;
         private System.Windows.Forms.TextBox textBoxEncargado;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxSucursal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1Guardar;

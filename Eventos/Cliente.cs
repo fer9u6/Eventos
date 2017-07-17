@@ -37,6 +37,17 @@ namespace Eventos
             return bd.actualizarDatos("insert into Cliente(Id,IdCliente) values('" + cedula + "','" + idCliente + "')");
         }
 
+        public string obtenerNuevoId()
+        {
+            string id = "";
+            try
+            {
+                id = bd.ejecutarConsultaValor("select max(cast(IdCliente as int))+1 from Cliente");
+            }
+            catch (SqlException ex) { }
+
+            return id;
+        }
 
         /*Método para agregar un nuevo cliente a la base de datos         
          * Recibe: Los datos del nuevo estudiante          
@@ -111,7 +122,7 @@ namespace Eventos
                         tabla = bd.ejecutarConsultaTabla("select * from Cliente c, PersonaFisica p  where c.Id = p.Id ");
                     }
                     else {
-                        tabla = bd.ejecutarConsultaTabla("select * from PersonaJuridica p ");
+                        tabla = bd.ejecutarConsultaTabla("select * from Cliente c,PersonaJuridica p ");
                     }
                 }
                 //Si el filtro apellido y general nulo                
@@ -122,7 +133,7 @@ namespace Eventos
                         tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaFisica p where c.Id = p.Id and p.Apellido1 ='" + filtroApellido+ "'or p.Apellido2 = '"+filtroApellido+"'");
                     }
                     else {
-                        tabla = bd.ejecutarConsultaTabla("Select * from PersonaJuridica  p  ");
+                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c, PersonaJuridica  p  ");
                     }
                 }
                 //Si el filtro general no es nulo cargan losclientes con atributos que contengan ese filtro como parte del atributo (like)                
@@ -134,7 +145,7 @@ namespace Eventos
                     }
                     else
                     {
-                        tabla = bd.ejecutarConsultaTabla("Select * from PersonaJuridica p where  (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%')");
+                        tabla = bd.ejecutarConsultaTabla("Select * from Cliente c ,PersonaJuridica p where (p.Id like '%" + filtroGeneral + "%' OR p.Nombre like '%" + filtroGeneral + "%' OR p.Contacto like '%" + filtroGeneral + "%' OR p.Correo like '%" + filtroGeneral + "%' OR c.Id like '%" + filtroGeneral+ "%')");
                     }
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que coincidan con ambos filtros                 

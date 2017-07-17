@@ -30,11 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarClientePF));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxDesc = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxCan = new System.Windows.Forms.ComboBox();
+            this.comboBoxPro = new System.Windows.Forms.ComboBox();
+            this.comboBoxPais = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBoxidCliente = new System.Windows.Forms.TextBox();
-            this.button1guardar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBoxCed = new System.Windows.Forms.TextBox();
             this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.textBoxTel = new System.Windows.Forms.TextBox();
@@ -52,15 +58,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxPais = new System.Windows.Forms.ComboBox();
-            this.comboBoxPro = new System.Windows.Forms.ComboBox();
-            this.comboBoxCan = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxDesc = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.button1guardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,8 +76,6 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBoxidCliente);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxCed);
             this.groupBox1.Controls.Add(this.textBoxCorreo);
             this.groupBox1.Controls.Add(this.textBoxTel);
@@ -105,6 +101,88 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(138, 308);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(31, 15);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "Pais";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(313, 308);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 15);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "Provincia";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(503, 308);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 15);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Canton";
+            // 
+            // textBoxDesc
+            // 
+            this.textBoxDesc.Location = new System.Drawing.Point(239, 385);
+            this.textBoxDesc.Name = "textBoxDesc";
+            this.textBoxDesc.Size = new System.Drawing.Size(388, 22);
+            this.textBoxDesc.TabIndex = 39;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(138, 385);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 15);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Descripcion";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // comboBoxCan
+            // 
+            this.comboBoxCan.FormattingEnabled = true;
+            this.comboBoxCan.Location = new System.Drawing.Point(506, 334);
+            this.comboBoxCan.Name = "comboBoxCan";
+            this.comboBoxCan.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCan.TabIndex = 37;
+            // 
+            // comboBoxPro
+            // 
+            this.comboBoxPro.FormattingEnabled = true;
+            this.comboBoxPro.Location = new System.Drawing.Point(316, 334);
+            this.comboBoxPro.Name = "comboBoxPro";
+            this.comboBoxPro.Size = new System.Drawing.Size(127, 24);
+            this.comboBoxPro.TabIndex = 36;
+            // 
+            // comboBoxPais
+            // 
+            this.comboBoxPais.FormattingEnabled = true;
+            this.comboBoxPais.Location = new System.Drawing.Point(141, 334);
+            this.comboBoxPais.Name = "comboBoxPais";
+            this.comboBoxPais.Size = new System.Drawing.Size(126, 24);
+            this.comboBoxPais.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(34, 334);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 15);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Direccion";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -124,33 +202,6 @@
             this.button1.Text = "<- Inicio";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBoxidCliente
-            // 
-            this.textBoxidCliente.Location = new System.Drawing.Point(427, 174);
-            this.textBoxidCliente.Name = "textBoxidCliente";
-            this.textBoxidCliente.Size = new System.Drawing.Size(200, 22);
-            this.textBoxidCliente.TabIndex = 19;
-            // 
-            // button1guardar
-            // 
-            this.button1guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1guardar.Location = new System.Drawing.Point(685, 404);
-            this.button1guardar.Name = "button1guardar";
-            this.button1guardar.Size = new System.Drawing.Size(75, 23);
-            this.button1guardar.TabIndex = 8;
-            this.button1guardar.Text = "Guardar";
-            this.button1guardar.UseVisualStyleBackColor = true;
-            this.button1guardar.Click += new System.EventHandler(this.button1guardar_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(299, 177);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 16);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "IdCliente";
             // 
             // textBoxCed
             // 
@@ -306,87 +357,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // label11
+            // button1guardar
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(34, 334);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 15);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Direccion";
-            // 
-            // comboBoxPais
-            // 
-            this.comboBoxPais.FormattingEnabled = true;
-            this.comboBoxPais.Location = new System.Drawing.Point(141, 334);
-            this.comboBoxPais.Name = "comboBoxPais";
-            this.comboBoxPais.Size = new System.Drawing.Size(126, 24);
-            this.comboBoxPais.TabIndex = 35;
-            // 
-            // comboBoxPro
-            // 
-            this.comboBoxPro.FormattingEnabled = true;
-            this.comboBoxPro.Location = new System.Drawing.Point(316, 334);
-            this.comboBoxPro.Name = "comboBoxPro";
-            this.comboBoxPro.Size = new System.Drawing.Size(127, 24);
-            this.comboBoxPro.TabIndex = 36;
-            // 
-            // comboBoxCan
-            // 
-            this.comboBoxCan.FormattingEnabled = true;
-            this.comboBoxCan.Location = new System.Drawing.Point(506, 334);
-            this.comboBoxCan.Name = "comboBoxCan";
-            this.comboBoxCan.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxCan.TabIndex = 37;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(138, 385);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 15);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Descripcion";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // textBoxDesc
-            // 
-            this.textBoxDesc.Location = new System.Drawing.Point(239, 385);
-            this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(388, 22);
-            this.textBoxDesc.TabIndex = 39;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(503, 308);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 15);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Canton";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(313, 308);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 15);
-            this.label14.TabIndex = 41;
-            this.label14.Text = "Provincia";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(138, 308);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 15);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "Pais";
+            this.button1guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1guardar.Location = new System.Drawing.Point(685, 404);
+            this.button1guardar.Name = "button1guardar";
+            this.button1guardar.Size = new System.Drawing.Size(75, 23);
+            this.button1guardar.TabIndex = 8;
+            this.button1guardar.Text = "Guardar";
+            this.button1guardar.UseVisualStyleBackColor = true;
+            this.button1guardar.Click += new System.EventHandler(this.button1guardar_Click);
             // 
             // AgregarClientePF
             // 
@@ -426,8 +406,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1guardar;
-        private System.Windows.Forms.TextBox textBoxidCliente;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxDesc;

@@ -56,7 +56,9 @@ namespace Eventos
             }
             else
             {
-                resultado = empleado.agregarEmpleado(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxIdEmpleado.Text, textBoxEncargado.Text, textBoxSucursal.Text, textBoxTel.Text);
+                string idempleado = empleado.obtenerNuevoId();
+                resultado = empleado.agregarEmpleado(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, idempleado, textBoxEncargado.Text, textBoxSucursal.Text, textBoxTel.Text);
+             
             }
 
             if (comboBoxPais.Text != "Seleccione" && comboBoxPro.Text != "Seleccione" && comboBoxCan.Text != "Seleccione")
@@ -80,7 +82,6 @@ namespace Eventos
                 textBoxCed.Clear();
                 textBoxTel.Clear();
                 textBoxSucursal.Clear();
-                textBoxIdEmpleado.Clear();
                 textBoxSucursal.Clear();
                 textBoxEncargado.Clear();
 

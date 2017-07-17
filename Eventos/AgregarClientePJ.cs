@@ -29,7 +29,8 @@ namespace Eventos
             }
             else
             {
-                resultado = cliente.agregarClientePJuridica(ced.Text, nom.Text, cor.Text, con.Text, idc.Text);
+                string idcliente = cliente.obtenerNuevoId();
+                resultado = cliente.agregarClientePJuridica(ced.Text, nom.Text, cor.Text, con.Text, idcliente);
             }
             //Si la inserción devuelve un 0 la inserción fue exitosa, por lo que se muestra un mensaje de éxito             
             if (resultado == 0)
@@ -40,7 +41,7 @@ namespace Eventos
                 cor.Clear();
                 ced.Clear();
                 con.Clear();
-                idc.Clear();
+                
 
             }             //si la inserción devuelve un código de error se puede validar con un mensaje de error personalizado             
             else if (resultado == 2627)

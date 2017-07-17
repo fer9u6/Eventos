@@ -43,6 +43,15 @@ namespace Eventos
             return bd.actualizarDatos(insertare);
         }
 
+        public string obtenerNuevoId()
+        {
+            string id = "";
+            id = bd.ejecutarConsultaValor("select max(cast(IdEmpleado as int))+1 from Empleado");
+
+            return id;
+        }
+
+
 
         /*Método para obtener los nombres de los empleados de la base de datos          
          * Recibe: Nada          

@@ -48,7 +48,10 @@ namespace Eventos
                 MessageBox.Show("Agrege numero de cedula ");
             }
             else {
-                resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxidCliente.Text, textBoxTel.Text);
+
+                string idcliente = cliente.obtenerNuevoId();
+                resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, idcliente, textBoxTel.Text);
+               
             }
 
             if (comboBoxPais.Text != "Seleccione" && comboBoxPro.Text != "Seleccione" && comboBoxCan.Text != "Seleccione")
@@ -71,7 +74,7 @@ namespace Eventos
                 textBoxCorreo.Clear();
                 textBoxCed.Clear();
                 textBoxTel.Clear();
-                textBoxidCliente.Clear();
+              
             
 
             }             //si la inserción devuelve un código de error se puede validar con un mensaje de error personalizado             

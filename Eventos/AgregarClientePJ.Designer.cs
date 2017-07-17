@@ -34,15 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.idc = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.idcliente = new System.Windows.Forms.Label();
             this.con = new System.Windows.Forms.TextBox();
             this.cor = new System.Windows.Forms.TextBox();
             this.nom = new System.Windows.Forms.TextBox();
             this.ced = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 146);
+            this.label2.Location = new System.Drawing.Point(37, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 1;
@@ -70,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 177);
+            this.label3.Location = new System.Drawing.Point(37, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 15);
             this.label3.TabIndex = 2;
@@ -80,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 207);
+            this.label4.Location = new System.Drawing.Point(34, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 3;
@@ -90,9 +88,7 @@
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.idc);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.idcliente);
             this.groupBox1.Controls.Add(this.con);
             this.groupBox1.Controls.Add(this.cor);
             this.groupBox1.Controls.Add(this.nom);
@@ -107,62 +103,6 @@
             this.groupBox1.Size = new System.Drawing.Size(364, 308);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            // 
-            // idc
-            // 
-            this.idc.Location = new System.Drawing.Point(108, 234);
-            this.idc.Name = "idc";
-            this.idc.Size = new System.Drawing.Size(247, 22);
-            this.idc.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(280, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // idcliente
-            // 
-            this.idcliente.AutoSize = true;
-            this.idcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idcliente.Location = new System.Drawing.Point(37, 237);
-            this.idcliente.Name = "idcliente";
-            this.idcliente.Size = new System.Drawing.Size(55, 15);
-            this.idcliente.TabIndex = 8;
-            this.idcliente.Text = "IdCliente";
-            // 
-            // con
-            // 
-            this.con.Location = new System.Drawing.Point(108, 204);
-            this.con.Name = "con";
-            this.con.Size = new System.Drawing.Size(247, 22);
-            this.con.TabIndex = 7;
-            // 
-            // cor
-            // 
-            this.cor.Location = new System.Drawing.Point(108, 174);
-            this.cor.Name = "cor";
-            this.cor.Size = new System.Drawing.Size(247, 22);
-            this.cor.TabIndex = 6;
-            // 
-            // nom
-            // 
-            this.nom.Location = new System.Drawing.Point(108, 143);
-            this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(247, 22);
-            this.nom.TabIndex = 5;
-            // 
-            // ced
-            // 
-            this.ced.Location = new System.Drawing.Point(108, 109);
-            this.ced.Name = "ced";
-            this.ced.Size = new System.Drawing.Size(247, 22);
-            this.ced.TabIndex = 4;
             // 
             // button2
             // 
@@ -183,6 +123,45 @@
             this.label10.Size = new System.Drawing.Size(327, 47);
             this.label10.TabIndex = 34;
             this.label10.Text = "Nuevo Cliente Juridico";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(280, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // con
+            // 
+            this.con.Location = new System.Drawing.Point(108, 230);
+            this.con.Name = "con";
+            this.con.Size = new System.Drawing.Size(247, 22);
+            this.con.TabIndex = 7;
+            // 
+            // cor
+            // 
+            this.cor.Location = new System.Drawing.Point(108, 189);
+            this.cor.Name = "cor";
+            this.cor.Size = new System.Drawing.Size(247, 22);
+            this.cor.TabIndex = 6;
+            // 
+            // nom
+            // 
+            this.nom.Location = new System.Drawing.Point(108, 150);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(247, 22);
+            this.nom.TabIndex = 5;
+            // 
+            // ced
+            // 
+            this.ced.Location = new System.Drawing.Point(108, 109);
+            this.ced.Name = "ced";
+            this.ced.Size = new System.Drawing.Size(247, 22);
+            this.ced.TabIndex = 4;
             // 
             // AgregarClientePJ
             // 
@@ -213,8 +192,6 @@
         private System.Windows.Forms.TextBox nom;
         private System.Windows.Forms.TextBox ced;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox idc;
-        private System.Windows.Forms.Label idcliente;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
     }

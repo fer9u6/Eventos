@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteClientes));
             this.buttonReporte = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
@@ -83,8 +84,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridViewClientes);
             this.Controls.Add(this.buttonReporte);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReporteClientes";
-            this.Text = "MejoresClientes";
+            this.Text = "Reporte";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReporteClientes_FormClosed);
             this.Load += new System.EventHandler(this.MejoresClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
