@@ -41,7 +41,9 @@
             this.tbTotal = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.dgvReporte = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,11 +180,22 @@
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // dgvReporte
+            // 
+            this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReporte.Location = new System.Drawing.Point(399, 12);
+            this.dgvReporte.Name = "dgvReporte";
+            this.dgvReporte.Size = new System.Drawing.Size(152, 80);
+            this.dgvReporte.TabIndex = 13;
+            this.dgvReporte.Visible = false;
+            this.dgvReporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReporte_CellContentClick);
+            // 
             // BuscarOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 385);
+            this.Controls.Add(this.dgvReporte);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.tbTotal);
@@ -199,6 +212,7 @@
             this.Name = "BuscarOrdenCompra";
             this.Text = "Buscar Orden de Compra";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +233,6 @@
         private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.DataGridView dgvReporte;
     }
 }

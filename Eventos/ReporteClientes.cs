@@ -135,6 +135,7 @@ namespace Eventos
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             To_pdf();
         }
 
@@ -158,6 +159,11 @@ namespace Eventos
         private void ReporteClientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridViewClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

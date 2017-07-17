@@ -61,20 +61,6 @@ namespace Eventos
             }
             return datos;
         }
-        /*
-        public SqlDataReader obtenerProveedoresEvento(string evento)
-        {
-            SqlDataReader datos = null;
-            try
-            {
-                datos = bd.ejecutarConsulta("select distinct pj.nombre from proveedor p, personajuridica pj, ordencompra oc, evento e where p.id = pj.id and p.idproveedor = oc.idproveedor and oc.idevento = e.idevento and e.nombre = '"+evento+"';");
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
-            }
-            return datos;
-        }*/
 
         public SqlDataReader obtenerIdOrdenes(string evento)
         {
@@ -88,6 +74,20 @@ namespace Eventos
                 MessageBox.Show("Error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             return datos;
+        }
+
+        public DataTable obtenerReporte()
+        {
+            DataTable tabla = null;
+            try
+            {
+                tabla = bd.ejecutarConsultaTabla("select oc.fecha as Fecha, oc.idordencompra as IdOrden, e.nombre as Evento, pj.nombre as Proveedor, oc.monto as Monto from ordencompra oc, evento e, personajuridica pj, proveedor p where oc.idevento = e.idevento and oc.idproveedor = p.idproveedor and p.id = pj.id order by cast(idordencompra as int) asc");
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Error al hacer la consulta", "Resultados", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            return tabla;
         }
 
         public int agregarOrdenCompra(string idordencompra, string evento, string proveedor, string fecha)
