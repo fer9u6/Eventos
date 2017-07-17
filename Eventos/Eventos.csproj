@@ -135,6 +135,7 @@
     <Compile Include="Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturas.cs" />
     <Compile Include="ListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -13,10 +13,19 @@ namespace Eventos
 {
     public partial class CrearFactura : Form
     {
-        
+        AccesoBaseDatos db;
+        Facturas facturas;
+
+        List<string> serviciosIncluidos;
+        List<int> cantidadServicios;
+
         public CrearFactura()
         {
             InitializeComponent();
+            db = new AccesoBaseDatos();
+            facturas = new Facturas();
+            serviciosIncluidos = new List<string> ();
+            cantidadServicios = new List<int> ();
             this.llenarComboboxServicio(comboBox_servicio);
             this.llenarComboboxCliente(comboBoxCliente);
             this.llenarComboboxEvento(comboBoxEvento);
@@ -24,11 +33,10 @@ namespace Eventos
 
         public SqlDataReader obtenerCliente()
         {
-            AccesoBaseDatos bd = new AccesoBaseDatos();
             SqlDataReader datos = null;
             try
             {
-                datos = bd.ejecutarConsulta("select distinct j.nombre from personaJuridica j union select distinct f.nombre from personaFisica f");
+                datos = db.ejecutarConsulta("select distinct j.nombre from personaJuridica j, cliente c where j.id = c.id union select distinct f.nombre from personaFisica f, cliente c where f.id = c.id");
             }
             catch (SqlException ex)
             {
@@ -42,8 +50,7 @@ namespace Eventos
             SqlDataReader datos = null;
             try
             {
-                AccesoBaseDatos bd = new AccesoBaseDatos();
-                   datos = bd.ejecutarConsulta("select distinct Evento.nombre from Evento");
+                   datos = db.ejecutarConsulta("select distinct Evento.nombre from Evento");
             }
             catch (SqlException ex)
             {
@@ -84,7 +91,7 @@ namespace Eventos
         {
             Servicios_conexion servicio = new Servicios_conexion();
             combobox.Items.Clear();
-            //Se obtiene un dataReader con todos los nombres de los estudiantes de
+            //Se obtiene un dataReader con todos los nombres de los clientes de
             //la base de datos
             SqlDataReader datos = this.obtenerCliente();
             /*Si existen datos en la base de datos se carga como primer elemento del
@@ -182,9 +189,15 @@ namespace Eventos
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Crear factura y linea factura
         {
-            //aqui para factura total
+            facturas.agregarFactura(comboBoxEvento.Text, comboBoxCliente.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"), textBox1.Text);
+            facturas.agregarLineaFactura(serviciosIncluidos, cantidadServicios);
+
+            comboBoxCliente.ResetText();
+            comboBoxEvento.ResetText();
+            dateTimePicker1.ResetText();
+            textBox1.Clear();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -197,12 +210,24 @@ namespace Eventos
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Linea Factura
         {
-             //aqui para linea factura
+            string servicio = comboBox_servicio.Text;
+            int cantidad = (int)numericUpDown1.Value;
+
+            serviciosIncluidos.Add(servicio);
+            cantidadServicios.Add(cantidad);
+
+            comboBox_servicio.ResetText();
+            numericUpDown1.ResetText();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }

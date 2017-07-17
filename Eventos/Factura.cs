@@ -12,9 +12,14 @@ namespace Eventos
 {
     public partial class Factura : Form
     {
+        AccesoBaseDatos db;
+
         public Factura()
         {
             InitializeComponent();
+            db = new AccesoBaseDatos();
+            this.cargarTabla(dataGridView1, 1);
+            this.cargarTabla(dataGridView2, 2);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -77,6 +82,25 @@ namespace Eventos
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void cargarTabla(DataGridView dgv, int tipo)
+        {
+            DataTable tabla = new DataTable();
+            if (tipo == 1) {
+                tabla = db.ejecutarConsultaTabla("Select f.IdFactura, f.IdEvento, e.Nombre 'Nombre Evento', f.IdCliente, pf.Nombre 'Nombre Cliente', f.Fecha, f.Monto from Factura f, Evento e, Cliente c, PersonaFisica pf where f.IdEvento = e.IdEvento AND f.IdCliente = c.IdCliente AND pf.Id = c.Id order by f.IdFactura ASC");
+            } else if (tipo == 2) {
+                tabla = db.ejecutarConsultaTabla("Select lf.IdFactura, lf.IdLineaFactura, lf.IdServicio, s.Nombre 'Nombre Servicio', lf.Cantidad from LineaFactura lf, Servicio s where lf.IdServicio = s.IdServicio");
+            }
+
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dgv.DataSource = bindingSource;
+            for (int i = 0; i < dgv.ColumnCount; i++)
+            {
+                dgv.Columns[i].Width = 100;
+            }
         }
     }
 }
