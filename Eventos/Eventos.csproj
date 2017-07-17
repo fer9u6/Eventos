@@ -189,6 +189,7 @@
     </Compile>
     <Compile Include="Proveedores.cs" />
     <Compile Include="Servicios_conexion.cs" />
+    <Compile Include="TipoUsuario.cs" />
     <EmbeddedResource Include="AgregarClientePF.resx">
       <DependentUpon>AgregarClientePF.cs</DependentUpon>
     </EmbeddedResource>
