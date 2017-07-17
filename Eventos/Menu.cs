@@ -185,5 +185,12 @@ namespace Eventos
             mc.Show();
             this.Hide();
         }
+
+        private void generarPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FacturaAPdf facturaPDF = new FacturaAPdf();
+            facturaPDF.Show();
+            this.Hide();
+        }
     }
 }

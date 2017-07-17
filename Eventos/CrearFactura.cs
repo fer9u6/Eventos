@@ -62,7 +62,7 @@ namespace Eventos
         private void llenarComboboxEvento(ComboBox combobox)
         {
             combobox.Items.Clear();
-            //Se obtiene un dataReader con todos los nombres de los estudiantes de
+            //Se obtiene un dataReader con todos los nombres de los eventos de
             //la base de datos
             SqlDataReader datos = this.obtenerEvento();
             /*Si existen datos en la base de datos se carga como primer elemento del
@@ -122,7 +122,7 @@ namespace Eventos
         {
             Servicios_conexion servicio = new Servicios_conexion();
             combobox.Items.Clear();
-            //Se obtiene un dataReader con todos los nombres de los estudiantes de
+            //Se obtiene un dataReader con todos los nombres de los servicios de
             //la base de datos
             SqlDataReader datos = servicio.obtenerServicios();
             /*Si existen datos en la base de datos se carga como primer elemento del
@@ -194,6 +194,7 @@ namespace Eventos
             facturas.agregarFactura(comboBoxEvento.Text, comboBoxCliente.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"), textBox1.Text);
             facturas.agregarLineaFactura(serviciosIncluidos, cantidadServicios);
 
+            MessageBox.Show("La factura ha sido creada exitosamente.");
             comboBoxCliente.ResetText();
             comboBoxEvento.ResetText();
             dateTimePicker1.ResetText();
@@ -217,6 +218,12 @@ namespace Eventos
 
             serviciosIncluidos.Add(servicio);
             cantidadServicios.Add(cantidad);
+            int monto = Int32.Parse(db.ejecutarConsultaValor("select Precio from Servicio where Nombre = '" + servicio + "'"));
+            int resultado = monto*cantidad;
+            if (Int32.TryParse(textBox1.Text, out int montoOg)) {
+                resultado += montoOg;
+            }
+            textBox1.Text = resultado.ToString();
 
             comboBox_servicio.ResetText();
             numericUpDown1.ResetText();
@@ -228,6 +235,11 @@ namespace Eventos
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

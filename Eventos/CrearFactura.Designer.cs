@@ -87,6 +87,7 @@
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Evento";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBoxCliente
             // 
@@ -143,6 +144,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(78, 327);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 20);
