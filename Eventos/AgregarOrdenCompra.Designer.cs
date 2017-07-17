@@ -206,7 +206,8 @@
             this.cbServicio.Name = "cbServicio";
             this.cbServicio.Size = new System.Drawing.Size(229, 21);
             this.cbServicio.TabIndex = 16;
-            this.cbServicio.SelectedIndexChanged += new System.EventHandler(this.cbServicio_SelectedIndexChanged);
+            this.cbServicio.SelectedIndexChanged += new System.EventHandler(this.llenarCosto);
+            this.cbServicio.TextUpdate += new System.EventHandler(this.llenarCosto);
             this.cbServicio.Click += new System.EventHandler(this.cbServicio_Click);
             // 
             // tbCantidad

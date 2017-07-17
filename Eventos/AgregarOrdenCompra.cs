@@ -208,11 +208,6 @@ namespace Eventos
 
         }
 
-        private void cbServicio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbServicio_Click(object sender, EventArgs e)
         {
             llenarComboboxServicio(cbServicio);
@@ -233,6 +228,7 @@ namespace Eventos
             {
                 tbCosto.Text = datos["costo"].ToString();
             }
+           // tbCosto.Refresh();
 
         }
 
