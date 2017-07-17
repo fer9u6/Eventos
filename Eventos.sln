@@ -1,16 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventos", "Eventos\Eventos.csproj", "{7FE7274E-65A0-4A6C-8122-7B43B996D221}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4082F9DE-F2AD-4E8B-AB0F-2ABFFFDC4636}"
-	ProjectSection(SolutionItems) = preProject
-		Eventos\Reporte Servicio.cs = Eventos\Reporte Servicio.cs
-		Eventos\Reporte Servicio.Designer.cs = Eventos\Reporte Servicio.Designer.cs
-		Eventos\Reporte Servicio.resx = Eventos\Reporte Servicio.resx
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
