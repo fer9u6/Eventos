@@ -25,29 +25,9 @@ namespace Eventos
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    SqlCommand cmd1, cmd2, cmd3, cmd4;
-                    SqlDataAdapter da1, da2, da3, da4;
-                    DataTable dt1, dt2, dt3, dt4;
-                    cmd1 = new SqlCommand("select usuario,clave from Usuario where usuario='" + usuario + "'and rol='Admin'and clave='" + encrypt.Encrypt(clave) + "'", con);
-                    cmd2 = new SqlCommand("select usuario,clave from Usuario where usuario='" + usuario + "'and rol='Supervisor'and clave='" + encrypt.Encrypt(clave) + "'", con);
-                    cmd3 = new SqlCommand("select usuario,clave from Usuario where usuario='" + usuario + "'and rol='Vendedor'and clave='" + encrypt.Encrypt(clave) + "'", con);
-                    cmd4 = new SqlCommand("select usuario,clave from Usuario where usuario='" + usuario + "'and rol='Secretaria'and clave='" + encrypt.Encrypt(clave) + "'", con);
-                    da1 = new SqlDataAdapter(cmd1);
-                    da2 = new SqlDataAdapter(cmd2);
-                    da3 = new SqlDataAdapter(cmd3);
-                    da4 = new SqlDataAdapter(cmd4);
-                    dt1 = new DataTable();
-                    dt2 = new DataTable();
-                    dt3 = new DataTable();
-                    dt4 = new DataTable();
-                    da1.Fill(dt1);
-                    da2.Fill(dt2);
-                    da3.Fill(dt3);
-                    da4.Fill(dt4);
-                    if () { }
-                    else if () { }
-                    else if () { }
-                    else if () { }
+                    con.Close();
+                    Menu menu = new Menu();
+                    menu.Show();
                 }
                 else
                 {
