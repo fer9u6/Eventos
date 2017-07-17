@@ -88,11 +88,11 @@ create table Evento(
 	IdCliente varchar(30) NOT NULL,
 	Nombre varchar(30) NULL,
 	Tipo varchar(30) NULL,
-	AsistenciaTotal dec(10) NULL,
-	AsistenciaEsperada dec(10) NULL,
-	Presupuesto dec(10) NULL,
+	AsistenciaTotal int(10) NULL,
+	AsistenciaEsperada int(10) NULL,
+	Presupuesto int(10) NULL,
 	Fecha date NULL,
-	CostoTotal dec(10) NULL,
+	CostoTotal int(10) NULL,
 	Descripcion varchar(30) NULL);
 
 alter table Evento
@@ -104,7 +104,7 @@ create table Factura(
 	IdEvento varchar(30) NOT NULL,
 	IdCliente varchar(30) NOT NULL,
 	Fecha date not NULL,
-	Monto dec(10) NULL);
+	Monto int(10) NULL);
 
 alter table Factura
 	add constraint pk_Factura
@@ -114,7 +114,7 @@ create table LineaFactura(
 	IdFactura varchar(30) NOT NULL,
 	IdLineaFactura varchar(30) NOT NULL,
 	IdServicio varchar(30) NOT NULL,
-	Cantidad dec(10) not NULL);
+	Cantidad int(10) not NULL);
 
 alter table LineaFactura
 	add constraint pk_LineaFactura
@@ -126,7 +126,7 @@ create table OrdenCompra(
 	IdEvento varchar(30) NOT NULL,
 	IdProveedor varchar(30) NOT NULL,
 	Fecha date not NULL,
-	Monto dec(10) NULL);
+	Monto int(10) NULL);
 
 alter table OrdenCompra
 	add constraint pk_OrdenCompra
@@ -136,7 +136,7 @@ create table LineaOrden(
 	IdOrdenCompra varchar(30) NOT NULL,
 	IdLineaOrden varchar(30) NOT NULL,
 	IdServicio varchar(30) NOT NULL,
-	Cantidad dec(10) not NULL);
+	Cantidad int(10) not NULL);
 
 alter table LineaOrden
 	add constraint pk_LineaOrden
@@ -147,8 +147,8 @@ create table Servicio(
 	IdProveedor varchar(30) NOT NULL,
 	Nombre varchar(30) NULL,
 	Detalle varchar(100) NULL,
-	Precio dec(10) NULL,
-	Costo dec(10) NULL);
+	Precio int(10) NULL,
+	Costo int(10) NULL);
 
 alter table Servicio
 	add constraint pk_Servicio
