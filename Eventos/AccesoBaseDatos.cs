@@ -94,7 +94,10 @@ namespace Eventos
             string resultado;
 
             dataAdapter.Fill(table);
-            resultado = table.Rows[0][0].ToString();
+            
+                resultado = table.Rows[0][0].ToString();
+           
+           
 
             return resultado;
 

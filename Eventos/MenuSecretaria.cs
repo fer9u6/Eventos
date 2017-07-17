@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Eventos
 {
-    public partial class Menu : Form
+    public partial class MenuSecretaria : Form
     {
-        public Menu()
+        public MenuSecretaria()
         {
             InitializeComponent();
         }
@@ -160,10 +160,10 @@ namespace Eventos
 
         }
 
-        private void mejoresClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verFacturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteClientes mc = new ReporteClientes();
-            mc.Show();
+            Factura f = new Factura();
+            f.Show();
             this.Hide();
         }
     }

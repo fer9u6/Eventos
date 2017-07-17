@@ -24,16 +24,22 @@ namespace Eventos
          * Modifica: inserta en la base de datos el nuevo empleado           
          * Retorna: el tipo de error que generó la inserción o cero si la inserción fue exitosa
          */
-        public int agregarEmpleado(string cedula, string nombre, string ape1, string ape2, string email, string fechaNac, char genero, string idEmpleado, string idencargado, string idsucursal)
+        public int agregarEmpleado(string cedula, string nombre, string ape1, string ape2, string email, string fechaNac, char genero, string idEmpleado, string idencargado, string idsucursal, string telefono)
         {
             //Para agregar un empleado se debe agregar las tablas: persona, tipo de persona(fisica o juridica) y empleado
             string tipop = "F";
             String insertarp = "insert into Persona(Id,Tipo) values('" + cedula + "','"+tipop + "')";
             bd.actualizarDatos(insertarp);
+            string tipot = "casa";
             String insertarpf = "insert into PersonaFisica(Id,Apellido1,Apellido2,Nombre,Correo,FecNacimiento,Sexo) values ('" + cedula + "', '" + ape1 + "','" + ape2 + "', '" + nombre + "', '" + email + "','" + fechaNac + "','" + genero + "' )";
             bd.actualizarDatos(insertarpf);
             //String idEncargado
             String insertare = "insert into Empleado(Id,IdEmpleado,IdEncargado,IdSucursal)values('" + cedula + "','" + idEmpleado + "','" + idencargado + "','" + idsucursal + "')";
+            if (telefono != "")
+            {
+                bd.actualizarDatos("insert into Telefono(Id,Tipo,Numero)values('" + cedula + "','" + tipot + "','" + telefono + "') ");
+            }
+
             return bd.actualizarDatos(insertare);
         }
 
@@ -79,17 +85,17 @@ namespace Eventos
                 else if (filtroNombre != null )
                 {
 
-                    tabla = bd.ejecutarConsultaTabla("Select * from PersonaFisica p where Nombre ='" + filtroNombre + "'");
+                    tabla = bd.ejecutarConsultaTabla("Select * from PersonaFisica p,Empleado e where e.Id = p.Id  and p.Nombre ='" + filtroNombre + "'");
                 }
                 //Si el filtro general no es nulo cargan los estudiantes con atributos que contengan ese filtro como parte del atributo (like)                
                 else if (filtroGeneral != null && filtroNombre == null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and (Nombre like '%" + filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral + "%' OR Apellido2 like '%" + filtroGeneral + "%' OR cedula like '%" + filtroGeneral + "%')");
+                    tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and (p.Nombre like '%" + filtroGeneral + "%' OR p.Apellido1 like '%" + filtroGeneral + "%' OR p.Apellido2 like '%" + filtroGeneral + "%' OR p.Id like '%" + filtroGeneral + "%')");
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que coincidan con ambos filtros                 
                 else if (filtroGeneral != null && filtroNombre != null)
                 {
-                    tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and (Nombre ='" + filtroNombre + "' &&  Nombre like '%" + filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral + "%' OR Apellido2 like '%" + filtroGeneral + "%' OR Id like '%" + filtroGeneral + "%')");
+                    tabla = bd.ejecutarConsultaTabla("Select * from Empleado e,PersonaFisica p where e.Id =p.Id and (p.Nombre ='" + filtroNombre + "' &&  p.Nombre like '%" + filtroGeneral + "%') OR p.Apellido1 like '%" + filtroGeneral + "%' OR p.Apellido2 like '%" + filtroGeneral + "%' OR p.Id like '%" + filtroGeneral + "%')");
 
                 }
 

@@ -42,19 +42,23 @@ namespace Eventos
                 genero = 'M';
             }
             genero.ToString();
+            int resultado = 1;
+            if (textBoxCed.Text == "")
+            {
+                MessageBox.Show("Agrege numero de cedula ");
+            }
+            else {
+                resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxidCliente.Text, textBoxTel.Text);
+            }
 
-            int resultado = cliente.agregarCliente(textBoxCed.Text, textBoxNom.Text, textBoxApe1.Text, textBoxApe2.Text, textBoxCorreo.Text, dateTimePicker1FecNac.Value.ToString("yyyy-MM-dd"), genero, textBoxidCliente.Text, textBoxTel.Text);
-
-            string tipo = "casa";
-            string codPais = dir.obtenerCodPais(comboBoxPais.Text);
-            string codProvincia = dir.obtenerCodProvincia(comboBoxPro.Text);
-            string codCanton = dir.obtenerCodCanton(comboBoxCan.Text);
-
-            MessageBox.Show("pruebas" + codPais + " " + codProvincia + " " + codCanton + " ");
-
-            int resultadodir = dir.agregarDireccion(textBoxCed.Text, tipo, codPais, codProvincia, codCanton, textBoxDesc.Text);
-
-
+            if (comboBoxPais.Text != "Seleccione" && comboBoxPro.Text != "Seleccione" && comboBoxCan.Text != "Seleccione")
+            {
+                string tipo = "casa";
+                string codPais = dir.obtenerCodPais(comboBoxPais.Text);
+                string codProvincia = dir.obtenerCodProvincia(comboBoxPro.Text);
+                string codCanton = dir.obtenerCodCanton(comboBoxCan.Text);
+                int resultadodir = dir.agregarDireccion(textBoxCed.Text, tipo, codPais, codProvincia, codCanton, textBoxDesc.Text);
+            }
 
             //Si la inserción devuelve un 0 la inserción fue exitosa, por lo que se muestra un mensaje de éxito             
             if (resultado == 0)
@@ -68,6 +72,7 @@ namespace Eventos
                 textBoxCed.Clear();
                 textBoxTel.Clear();
                 textBoxidCliente.Clear();
+            
 
             }             //si la inserción devuelve un código de error se puede validar con un mensaje de error personalizado             
             else if (resultado == 2627)
@@ -122,7 +127,8 @@ namespace Eventos
 
         }
         private void llenarComboboxCantones(ComboBox combobox)
-        {             //Se obtiene un dataReader con todos los nombres de los empleados de la base de datos             
+        {
+            
             SqlDataReader datos = dir.obtenerCantones();
 
             /*Si existen datos en la base de datos se carga como primer elemento del combobox un dato "Seleccione"  y luego se cargan todos los datos de la base de datos*/

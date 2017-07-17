@@ -21,9 +21,16 @@ namespace Eventos
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            int resultado = cliente.agregarClientePJuridica(ced.Text, nom.Text, cor.Text, con.Text, idc.Text);
-
+           
+            int resultado = 1;
+            if (ced.Text == "")
+            {
+                MessageBox.Show("Agrege numero de cedula ");
+            }
+            else
+            {
+                resultado = cliente.agregarClientePJuridica(ced.Text, nom.Text, cor.Text, con.Text, idc.Text);
+            }
             //Si la inserción devuelve un 0 la inserción fue exitosa, por lo que se muestra un mensaje de éxito             
             if (resultado == 0)
             {

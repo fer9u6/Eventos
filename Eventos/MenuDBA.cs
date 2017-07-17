@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Eventos
 {
-    public partial class Menu : Form
+    public partial class MenuDBA : Form
     {
-        public Menu()
+        public MenuDBA()
         {
             InitializeComponent();
         }
@@ -158,13 +158,6 @@ namespace Eventos
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void mejoresClientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ReporteClientes mc = new ReporteClientes();
-            mc.Show();
-            this.Hide();
         }
     }
 }
