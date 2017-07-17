@@ -12,7 +12,7 @@ namespace Eventos
 
         public TipoUsuario()
         {
-            tipoUsuario = 1;
+            tipoUsuario = 0;
         } 
 
         public int getTipoUsuario()

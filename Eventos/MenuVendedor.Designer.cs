@@ -1,6 +1,6 @@
 ﻿namespace Eventos
 {
-    partial class Menu
+    partial class MenuVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuVendedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -45,21 +45,14 @@
             this.buscarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.crearFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,13 +72,10 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton7,
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3,
-            this.toolStripDropDownButton4,
             this.toolStripDropDownButton5,
-            this.toolStripButton1,
             this.toolStripDropDownButton6,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
@@ -216,33 +206,6 @@
             this.reporteServicioToolStripMenuItem.Text = "Reporte Servicio";
             this.reporteServicioToolStripMenuItem.Click += new System.EventHandler(this.reporteServicioToolStripMenuItem_Click);
             // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarEmpleadoToolStripMenuItem,
-            this.listaEmpleadosToolStripMenuItem});
-            this.toolStripDropDownButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton4.Image")));
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(73, 22);
-            this.toolStripDropDownButton4.Text = "Empleado";
-            this.toolStripDropDownButton4.Click += new System.EventHandler(this.toolStripDropDownButton4_Click);
-            // 
-            // agregarEmpleadoToolStripMenuItem
-            // 
-            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar Empleado";
-            this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
-            // 
-            // listaEmpleadosToolStripMenuItem
-            // 
-            this.listaEmpleadosToolStripMenuItem.Name = "listaEmpleadosToolStripMenuItem";
-            this.listaEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.listaEmpleadosToolStripMenuItem.Text = "Lista Empleados";
-            this.listaEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaEmpleadosToolStripMenuItem_Click);
-            // 
             // toolStripDropDownButton5
             // 
             this.toolStripDropDownButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -258,26 +221,16 @@
             // crearFacturaToolStripMenuItem
             // 
             this.crearFacturaToolStripMenuItem.Name = "crearFacturaToolStripMenuItem";
-            this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearFacturaToolStripMenuItem.Text = "Crear Factura";
             this.crearFacturaToolStripMenuItem.Click += new System.EventHandler(this.crearFacturaToolStripMenuItem_Click);
             // 
             // verFacturasToolStripMenuItem
             // 
             this.verFacturasToolStripMenuItem.Name = "verFacturasToolStripMenuItem";
-            this.verFacturasToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.verFacturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verFacturasToolStripMenuItem.Text = "Ver Facturas";
             this.verFacturasToolStripMenuItem.Click += new System.EventHandler(this.verFacturasToolStripMenuItem_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 19);
-            this.toolStripButton1.Text = "Proveedor";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // toolStripDropDownButton6
             // 
@@ -288,7 +241,7 @@
             this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(53, 19);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(53, 22);
             this.toolStripDropDownButton6.Text = "Orden";
             this.toolStripDropDownButton6.Click += new System.EventHandler(this.toolStripDropDownButton6_Click);
             // 
@@ -312,7 +265,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
+            this.toolStripButton2.Size = new System.Drawing.Size(45, 22);
             this.toolStripButton2.Text = "Ayuda";
             // 
             // pictureBox1
@@ -326,31 +279,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // toolStripDropDownButton7
-            // 
-            this.toolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarNuevoUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem});
-            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
-            this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
-            this.toolStripDropDownButton7.Size = new System.Drawing.Size(60, 22);
-            this.toolStripDropDownButton7.Text = "Usuario";
-            // 
-            // agregarNuevoUsuarioToolStripMenuItem
-            // 
-            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar Nuevo Usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
-            // 
-            // Menu
+            // MenuVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,7 +289,7 @@
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Menu";
+            this.Name = "MenuVendedor";
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -386,16 +315,12 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem personaJuridicaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personaFisicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
-        private System.Windows.Forms.ToolStripMenuItem agregarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
         private System.Windows.Forms.ToolStripMenuItem crearFacturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verFacturasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem mejoresClientesToolStripMenuItem;
@@ -403,8 +328,5 @@
         private System.Windows.Forms.ToolStripMenuItem agregarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarOrdenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteServicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton7;
-        private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
     }
 }
