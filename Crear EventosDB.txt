@@ -326,3 +326,213 @@ alter table Direccion
 add constraint fk_Direccion_Canton
 foreign key (CodPais, CodProvincia, CodCanton)
 references Canton (CodPais, CodProvincia, CodCanton);
+
+--- Triggers para Auditoria
+
+create table Auditoria(
+	Tabla varchar(30),
+	Usuario varchar(30),
+	Fecha date,
+	Operacion varchar(10),
+	ColumnaMod varchar (30),
+	ValorViejo varchar(30),
+	ValorNuevo varchar(30));
+
+create trigger AuditaEvento
+	on Evento
+	after insert,delete,update
+	as
+		begin
+		declare 
+		@Tabla varchar(30),
+		@Usuario varchar(30),
+		@Fecha date,
+		@Operacion varchar(10),
+		@ColumnaMod varchar(30),
+		@ValorViejo varchar(30),
+		@ValorNuevo varchar(30)
+		set @Tabla = 'Evento' 
+		if exists(select * from inserted) and not exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Insertar'
+			set @ValorNuevo = (select idevento from inserted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ValorNuevo)
+		end
+		else if not exists(select * from inserted) and exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Borrar'
+			set @ValorViejo = (select idevento from deleted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorViejo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion,@ValorViejo)
+		end
+		else if exists(select * from inserted) and exists(select * from deleted)
+		begin
+			if (select fecha from inserted)<>(select fecha from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Fecha'
+			set @ValorViejo = (select cast(fecha as varchar) from deleted)
+			set @ValorNuevo = (select CAST(fecha as varchar) from inserted)
+			insert into Auditoria (Tabla,Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+			if (select nombre from inserted)<>(select nombre from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Nombre'
+			set @ValorViejo = (select nombre from deleted)
+			set @ValorNuevo = (select nombre from inserted)
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+			if (select presupuesto from inserted)<>(select presupuesto from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Presupuesto'
+			set @ValorViejo = (select presupuesto from deleted)
+			set @ValorNuevo = (select presupuesto from inserted)
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+			if (select costototal from inserted)<>(select costototal from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'CostoTotal'
+			set @ValorViejo = (select cast(costototal as varchar) from deleted)
+			set @ValorNuevo = (select CAST(costototal as varchar) from inserted)
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+		end
+	end;
+
+	create trigger AuditaFactura
+	on Factura
+	after insert,delete,update
+	as
+		begin
+		declare 
+		@Tabla varchar(30),
+		@Usuario varchar(30),
+		@Fecha date,
+		@Operacion varchar(10),
+		@ColumnaMod varchar(30),
+		@ValorViejo varchar(30),
+		@ValorNuevo varchar(30)
+		set @Tabla = 'Factura' 
+		if exists(select * from inserted) and not exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Insertar'
+			set @ValorNuevo = (select idfactura from inserted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ValorNuevo)
+		end
+		else if not exists(select * from inserted) and exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Borrar'
+			set @ValorViejo = (select idfactura from deleted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorViejo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion,@ValorViejo)
+		end
+		else if exists(select * from inserted) and exists(select * from deleted)
+		begin
+			if (select fecha from inserted)<>(select fecha from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Fecha'
+			set @ValorViejo = (select cast(fecha as varchar) from deleted)
+			set @ValorNuevo = (select CAST(fecha as varchar) from inserted)
+			insert into Auditoria (Tabla,Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+			if (select monto from inserted)<>(select monto from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Monto'
+			set @ValorViejo = (select cast(monto as varchar) from deleted)
+			set @ValorNuevo = (select CAST(monto as varchar) from inserted)
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+		end
+	end;
+
+	create trigger AuditaOrdenCompra
+	on OrdenCompra
+	after insert,delete,update
+	as
+		begin
+		declare 
+		@Tabla varchar(30),
+		@Usuario varchar(30),
+		@Fecha date,
+		@Operacion varchar(10),
+		@ColumnaMod varchar(30),
+		@ValorViejo varchar(30),
+		@ValorNuevo varchar(30)
+		set @Tabla = 'OrdenCompra' 
+		if exists(select * from inserted) and not exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Insertar'
+			set @ValorNuevo = (select idordencompra from inserted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ValorNuevo)
+		end
+		else if not exists(select * from inserted) and exists(select * from deleted)
+		begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Borrar'
+			set @ValorViejo = (select idordencompra from deleted);
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ValorViejo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion,@ValorViejo)
+		end
+		else if exists(select * from inserted) and exists(select * from deleted)
+		begin
+			if (select fecha from inserted)<>(select fecha from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Fecha'
+			set @ValorViejo = (select cast(fecha as varchar) from deleted)
+			set @ValorNuevo = (select CAST(fecha as varchar) from inserted)
+			insert into Auditoria (Tabla,Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla,@Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+			if (select monto from inserted)<>(select monto from deleted)
+			begin
+			set @Usuario = system_user
+			set @Fecha = getdate()
+		    set @Operacion = 'Modificar'
+			set @ColumnaMod = 'Monto'
+			set @ValorViejo = (select cast(monto as varchar) from deleted)
+			set @ValorNuevo = (select CAST(monto as varchar) from inserted)
+			insert into Auditoria (Tabla, Usuario, Fecha, Operacion, ColumnaMod, ValorViejo, ValorNuevo)
+			values (@Tabla, @Usuario, @Fecha, @Operacion, @ColumnaMod, @ValorViejo, @ValorNuevo)
+			end
+		end
+	end;
