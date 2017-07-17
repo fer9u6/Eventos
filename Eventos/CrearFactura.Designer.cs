@@ -41,12 +41,13 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -61,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(115, 387);
+            this.button2.Location = new System.Drawing.Point(108, 369);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 23);
             this.button2.TabIndex = 10;
@@ -72,9 +73,9 @@
             // comboBoxEvento
             // 
             this.comboBoxEvento.FormattingEnabled = true;
-            this.comboBoxEvento.Location = new System.Drawing.Point(74, 135);
+            this.comboBoxEvento.Location = new System.Drawing.Point(78, 135);
             this.comboBoxEvento.Name = "comboBoxEvento";
-            this.comboBoxEvento.Size = new System.Drawing.Size(198, 21);
+            this.comboBoxEvento.Size = new System.Drawing.Size(194, 21);
             this.comboBoxEvento.TabIndex = 12;
             this.comboBoxEvento.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -90,9 +91,9 @@
             // comboBoxCliente
             // 
             this.comboBoxCliente.FormattingEnabled = true;
-            this.comboBoxCliente.Location = new System.Drawing.Point(74, 173);
+            this.comboBoxCliente.Location = new System.Drawing.Point(78, 173);
             this.comboBoxCliente.Name = "comboBoxCliente";
-            this.comboBoxCliente.Size = new System.Drawing.Size(198, 21);
+            this.comboBoxCliente.Size = new System.Drawing.Size(194, 21);
             this.comboBoxCliente.TabIndex = 14;
             // 
             // label1
@@ -107,9 +108,9 @@
             // comboBox_servicio
             // 
             this.comboBox_servicio.FormattingEnabled = true;
-            this.comboBox_servicio.Location = new System.Drawing.Point(74, 210);
+            this.comboBox_servicio.Location = new System.Drawing.Point(78, 210);
             this.comboBox_servicio.Name = "comboBox_servicio";
-            this.comboBox_servicio.Size = new System.Drawing.Size(198, 21);
+            this.comboBox_servicio.Size = new System.Drawing.Size(194, 21);
             this.comboBox_servicio.TabIndex = 16;
             // 
             // label3
@@ -133,54 +134,46 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(74, 97);
+            this.dateTimePicker1.Location = new System.Drawing.Point(78, 97);
             this.dateTimePicker1.MinDate = new System.DateTime(2017, 6, 19, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
             this.dateTimePicker1.TabIndex = 27;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 281);
+            this.textBox1.Location = new System.Drawing.Point(78, 327);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
+            this.textBox1.Size = new System.Drawing.Size(194, 20);
             this.textBox1.TabIndex = 28;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 284);
+            this.label5.Location = new System.Drawing.Point(27, 330);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 29;
             this.label5.Text = "Monto";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(73, 318);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 54);
-            this.textBox2.TabIndex = 30;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 321);
+            this.label6.Location = new System.Drawing.Point(27, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Detalle";
+            this.label6.Text = "Cantidad";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -195,7 +188,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(-2, -9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(316, 436);
+            this.groupBox1.Size = new System.Drawing.Size(316, 400);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -212,20 +205,27 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(74, 243);
+            this.button3.Location = new System.Drawing.Point(78, 287);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 23);
+            this.button3.Size = new System.Drawing.Size(194, 23);
             this.button3.TabIndex = 32;
             this.button3.Text = "Agregar otro Servicio";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(78, 250);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(194, 20);
+            this.numericUpDown1.TabIndex = 37;
             // 
             // CrearFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(314, 427);
+            this.ClientSize = new System.Drawing.Size(314, 391);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CrearFactura";
@@ -233,6 +233,7 @@
             this.Load += new System.EventHandler(this.Factura_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,10 +252,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

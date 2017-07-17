@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.agregarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,9 +60,6 @@
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +70,7 @@
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Location = new System.Drawing.Point(-3, -14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(464, 43);
+            this.groupBox1.Size = new System.Drawing.Size(563, 43);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -90,9 +90,33 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(458, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(557, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton7
+            // 
+            this.toolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarNuevoUsuarioToolStripMenuItem,
+            this.eliminarUsuarioToolStripMenuItem});
+            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
+            this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
+            this.toolStripDropDownButton7.Size = new System.Drawing.Size(60, 22);
+            this.toolStripDropDownButton7.Text = "Usuario";
+            // 
+            // agregarNuevoUsuarioToolStripMenuItem
+            // 
+            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar Nuevo Usuario";
+            // 
+            // eliminarUsuarioToolStripMenuItem
+            // 
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
             // 
             // toolStripDropDownButton1
             // 
@@ -258,14 +282,14 @@
             // crearFacturaToolStripMenuItem
             // 
             this.crearFacturaToolStripMenuItem.Name = "crearFacturaToolStripMenuItem";
-            this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.crearFacturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearFacturaToolStripMenuItem.Text = "Crear Factura";
             this.crearFacturaToolStripMenuItem.Click += new System.EventHandler(this.crearFacturaToolStripMenuItem_Click);
             // 
             // verFacturasToolStripMenuItem
             // 
             this.verFacturasToolStripMenuItem.Name = "verFacturasToolStripMenuItem";
-            this.verFacturasToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.verFacturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verFacturasToolStripMenuItem.Text = "Ver Facturas";
             this.verFacturasToolStripMenuItem.Click += new System.EventHandler(this.verFacturasToolStripMenuItem_Click);
             // 
@@ -275,7 +299,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 19);
+            this.toolStripButton1.Size = new System.Drawing.Size(65, 22);
             this.toolStripButton1.Text = "Proveedor";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -288,7 +312,7 @@
             this.toolStripDropDownButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton6.Image")));
             this.toolStripDropDownButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
-            this.toolStripDropDownButton6.Size = new System.Drawing.Size(53, 19);
+            this.toolStripDropDownButton6.Size = new System.Drawing.Size(53, 22);
             this.toolStripDropDownButton6.Text = "Orden";
             this.toolStripDropDownButton6.Click += new System.EventHandler(this.toolStripDropDownButton6_Click);
             // 
@@ -312,50 +336,26 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(45, 19);
+            this.toolStripButton2.Size = new System.Drawing.Size(45, 22);
             this.toolStripButton2.Text = "Ayuda";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Eventos.Properties.Resources.eventos4;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(438, 249);
+            this.pictureBox1.Size = new System.Drawing.Size(545, 331);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // toolStripDropDownButton7
-            // 
-            this.toolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarNuevoUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem});
-            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
-            this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
-            this.toolStripDropDownButton7.Size = new System.Drawing.Size(60, 22);
-            this.toolStripDropDownButton7.Text = "Usuario";
-            // 
-            // agregarNuevoUsuarioToolStripMenuItem
-            // 
-            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar Nuevo Usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(462, 296);
+            this.ClientSize = new System.Drawing.Size(563, 367);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.HelpButton = true;

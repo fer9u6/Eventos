@@ -86,7 +86,7 @@ namespace Eventos
             combobox.Items.Clear();
             //Se obtiene un dataReader con todos los nombres de los estudiantes de
             //la base de datos
-            SqlDataReader datos = this.obtenerEvento();
+            SqlDataReader datos = this.obtenerCliente();
             /*Si existen datos en la base de datos se carga como primer elemento del
             combobox un dato "Seleccione"
             y luego se cargan todos los datos de la base de datos*/
@@ -184,7 +184,7 @@ namespace Eventos
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //aqui para factura total
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -199,7 +199,7 @@ namespace Eventos
 
         private void button3_Click(object sender, EventArgs e)
         {
-             
+             //aqui para linea factura
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
